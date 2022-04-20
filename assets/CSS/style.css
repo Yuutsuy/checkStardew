@@ -30,7 +30,7 @@ th, td {
     margin-right:auto;
     width:75%;
     height:100%;
-    background-color:aliceblue;
+    background-color:rgba(240, 248, 255, 0.8);
 }
 /* div de cabeçalho dentro da div principal*/
 #main #cabecalho {
@@ -54,17 +54,38 @@ th, td {
     padding-right:3%;
 }
 #main #primavera #infoPrimavera {
-    font-size:30px;
-}
-#main #primavera #infoPrimavera #sobBatata {
     display:flex;
     justify-content:space-between;
     width:100%;
-    height:auto;
+}
+#main #primavera #infoPrimavera #plantas {
+    width:100%;
+}
+#main #primavera #infoPrimavera #plantas select {
+    border: 1px solid black;
+    background-color:#FFF7BC;
+    border-radius:2px;
+    border-radius:2px;
+    margin-top:20%;
+    width:87%;
+    height:35px; 
+}
+#main #primavera #infoPrimavera #plantas input {
+    border: 1px solid black;
+    background-color:#FFF7BC;
+    width:87%;
+    height:35px;
 }
 
-#main #primavera #infoPrimavera #sobBatata #informacoes {
-    background-color:darkolivegreen;
-    width:50%;
+#main #primavera #infoPrimavera #informacoes {
+    width:100%;
+    background-color:#FFF7BC;
+}
+#main #primavera #infoPrimavera #informacoes #plantas {
+    width:100%;
     height:100%;
+    padding:1%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
 }

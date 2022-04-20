@@ -12,5 +12,9 @@ body {
     width:75%;
     height:100%;
     background-color:white;
-    position:relative;
+}
+#main #div1 {
+    background-color:cornflowerblue;
+    width:100%;
+    height:100px;
 }

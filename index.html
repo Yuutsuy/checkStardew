@@ -8,63 +8,87 @@
     <title>Stardew Check</title>
 </head>
 <body>
-    <!-- div principal -->
+    <!-- Div principal -->
     <div id="main">
-        <!-- div do cabeçalho -->
+        <!-- Div do cabeçalho -->
         <div id="cabecalho">
             <Img src="assets/IMG/logoStardew.png"
                  alt="LogoStardew"></Img>
         </div>
+        <!-- Fim div do cabeçalho -->
 
-        <!-- div sobre a primavera -->
+        <!-- Div sobre a primavera -->
         <div id="primavera">
-            <!-- div do titulo na div primavera -->
+            <!-- Div do titulo na div primavera -->
             <div class="titulo">
                 <h1>Primavera</h1>
                 <div class="faixa"></div>
             </div>
+            <!-- Fim div do titulo na div primavera -->
+            <!-- Div de informações da primavera -->
             <div id="infoPrimavera">
-                <div id="plantas">
-                    <h1>1 - Selecione o que você quer plantar e a quantidade:</h1>
-                    <select>
-                        <option value="opt1">Selecione o que vai plantar</option>
-                        <option value="opt2">Chirívia</option>
-                        <option value="opt3">Alho</option>
-                        <option value="opt4">Batata</option>
-                        <option value="opt5">Couve</option>
-                        <option value="opt6">Couve-flor</option>
-                        <option value="opt7">Ruibardo</option>
-                        <option value="opt8">Vagem</option>
-                        <option value="opt9">Morango</option>
-                        <option value="opt10">Tulipa</option>
-                        <option value="opt11">Jasmim-Azul</option>
+                <!-- Div de opções dentro da div infoPrimavera -->
+                <div id="opcoes">
+                    <h2>1 - Selecione o que você quer fazer (Digite apenas o ouro que quer gastar OU o tanto que quer plantar):</h2>
+                    <select name="plantacao">
+                        <optgroup label="Plantas">
+                            <option value="opt1">Selecione o que vai plantar</option>
+                            <option value="opt2">Chirívia</option>
+                            <option value="opt3">Alho</option>
+                            <option value="opt4">Batata</option>
+                            <option value="opt5">Couve</option>
+                            <option value="opt6">Couve-flor</option>
+                            <option value="opt7">Ruibardo</option>
+                            <option value="opt8">Vagem</option>
+                            <option value="opt9">Morango</option>
+                        </optgroup>
+                        <optgroup label="Flores">
+                            <option value="opt10">Tulipa</option>
+                            <option value="opt11">Jasmim-Azul</option>  
+                        </optgroup>
                     </select>
-                    <input type="Number" placeholder="Digite a quantidade para plantar">
+                    <input id="quantPlantar" type="Number" placeholder="Digite a quantidade para plantar">
+                    <input id="quantOuro" type="Number" placeholder="Digite a quantidade de ouro que deseja gastar">
+                    <br/>
+                    <button class="btn" onclick="exibirDados()">Exibir</button>
                 </div>
+                <!-- Fim div de opcoes dentro da div infoPrimavera -->
+                <!-- Div informacoes dentro da div infoPrimavera -->
                 <div id="informacoes">
+                    <!-- Div plantas dentro da div informacoes -->
                     <div id="plantas">
+                        <!-- Div quant dentro da div plantas -->
                         <div id="quant">
+                            <div id="imgPlanta"></div>
                             <div id="quantPlantas">
                                 <h2>Quantidade: </h2>
                                 <h3>00</h3>
                             </div>
-                            <div id="imgPlanta"></div>
                         </div>
+                        <!-- Fim div quant dentro da div plantas -->
+                        <!-- Div custo dentro da div plantas -->
                         <div id="custo">
                             <h2>Custo total: </h2>
                             <h3>00</h3>
+
                         </div>
+                        <!-- Fim div custo dentro da div plantas -->
+                        <!-- Div tempo dentro da div plantas -->
                         <div id="tempo">
                             <h2>Tempo para colheita: </h2>
                             <h3>00</h3>
                         </div>
+                        <!-- Fim div tempo dentro da div plantas -->
                     </div>
-                    <div id="item">
-                    </div>
+                    <!-- Fim d iv plantas dentro da div informacoes -->
                 </div>
+                <!-- Fim div informações dentro da div infoPrimavera -->
             </div>
+            <!-- Fim div de informações da primavera -->
         </div>
+        <!-- Fim div sobre a primavera -->
     </div>
+    <!-- Fim div principal -->
 
     <script src="./assets/JS/main.js"></script>
 </body>

@@ -3,7 +3,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    font-family: 'VT323', monospace;
+    font-family: 'Source Sans Pro', sans-serif;
     color:#E49F01;
     text-shadow: 1px 2px 0 black;
 }
@@ -31,10 +31,11 @@ th, td {
     margin-top:2%; 
     border: 1px solid black;
     border-radius: 4px;
-    background-color:#FFF7BC;
+    background-color:#DACC96;
+    box-shadow: inset -1px -1px 2px #362222;
 }
 button:active {
-    background-color:#E2D784;
+    background-color:#BF8B67;
 }
 /* fim definindo classes a serem reaproveitados */
 
@@ -44,7 +45,7 @@ button:active {
     margin-left:auto;
     margin-right:auto;
     width:75%;
-    height:100%;
+    height:auto;    
     background-color:rgba(240, 248, 255, 0.8);
 }
 /* div de cabeçalho dentro da div principal*/
@@ -82,18 +83,20 @@ button:active {
 }
 #main #primavera #infoPrimavera #opcoes select {
     border: 1px solid black;
-    background-color:#FFF7BC;
+    background-color:#FFF1BD;
     border-radius:2px;
     margin-top:20%;
     width:87%;
-    height:35px; 
+    height:35px;
+    box-shadow: inset 0 0 1em #F3C892;
 }
 #main #primavera #infoPrimavera #opcoes input {
     border: 1px solid black;
-    background-color:#FFF7BC;
+    background-color:#FFF1BD;
     border-radius:2px;
     width:87%;
     height:35px;
+    box-shadow: inset 0 0 1em #F3C892;
 }
 #main #primavera #infoPrimavera #botoes {
     width:70%;
@@ -102,17 +105,24 @@ button:active {
 }
 
 #main #primavera #infoPrimavera #informacoes {
-    background-color:#FFF7BC;
+    background-color:#FFF1BD;
     width:100%;
+    display:flex;
 }
-#main #primavera #infoPrimavera #informacoes #plantas {
+#main #primavera #infoPrimavera #informacoes #infoEsquerda {
     height:100%;
+    width:50%;
     display:flex;
     flex-direction:column;
     justify-content:space-between;
     padding:1%;
 }
-#main #primavera #infoPrimavera #informacoes #plantas #imgPlanta {
+#main #primavera #infoPrimavera #informacoes #infoDireita {
+    width:50%;
+    height:100%;
+    padding:10px;
+}
+#main #primavera #infoPrimavera #informacoes #infoDireita #imgPlanta {
     width:80px;
     height:80px;
     float:right;
@@ -120,4 +130,18 @@ button:active {
     box-shadow: 0 0 1em white;
     box-shadow: inset 0 0 1em white;
     background-size:100%;
+}
+
+#main #primavera #maisSobre {
+    width:100%;
+    height:340px;
+}
+#main #maisSobre #calenPrimavera {
+    width:55%;
+    height:300px;
+    margin-top:15px;
+    background-image:url(../IMG/calendarioPrimavera.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    float:right;
 }

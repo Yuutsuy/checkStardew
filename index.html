@@ -29,7 +29,7 @@
             <div id="infoPrimavera">
                 <!-- Div de opções dentro da div infoPrimavera -->
                 <div id="opcoes">
-                    <h2>1 - Selecione o que você quer fazer (Digite apenas o ouro que quer gastar OU o tanto que quer plantar):</h2>
+                    <h2>1 - Selecione o que você quer fazer (Escolha apenas uma opção, calcular por ouro ou por quantidade):</h2>
                     <select name="plantacao">
                         <optgroup label="Plantas">
                             <option value="opt1">Selecione o que vai plantar</option>
@@ -50,7 +50,10 @@
                     <input id="quantPlantar" type="Number" placeholder="Digite a quantidade para plantar">
                     <input id="quantOuro" type="Number" placeholder="Digite a quantidade de ouro que deseja gastar">
                     <br/>
-                    <button class="btn" onclick="exibirDados()">Exibir</button>
+                    <div id="botoes">
+                        <button class="btn" onclick="exibirSementes()">Calcular Quantidade</button>
+                        <button class="btn" onclick="exibirOuro()">Calcular Ouro</button>
+                    </div>
                 </div>
                 <!-- Fim div de opcoes dentro da div infoPrimavera -->
                 <!-- Div informacoes dentro da div infoPrimavera -->
@@ -78,6 +81,12 @@
                             <h2>Tempo para colheita: </h2>
                             <h3>00</h3>
                         </div>
+                        <!-- Fim div tempo dentro da div plantas -->
+                        <!-- Div calendário da primavera dentro da div plantas -->
+                        <div id="calenPrimavera">
+
+                        </div>
+                        <!-- Fim div calendário da primavera dentro da div plantas -->
                         <!-- Fim div tempo dentro da div plantas -->
                     </div>
                     <!-- Fim d iv plantas dentro da div informacoes -->

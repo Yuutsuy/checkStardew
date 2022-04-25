@@ -39,6 +39,19 @@ button:active {
 }
 /* fim definindo classes a serem reaproveitados */
 
+/* classes para utilizar com javascript */
+.padrao {
+    background-image:none;
+}
+.chirivia {
+    background-image:url('../IMG/chirivia.png');
+}
+.alho {
+    background-image:url('../IMG/alho.png');
+}
+/* fim classes para utilizar com javascript */
+
+
 /* div principal */
 #main {
     display:block;
@@ -124,6 +137,9 @@ button:active {
     width:50%;
     height:100%;
     padding:10px;
+}
+#main #primavera #infoPrimavera #informacoes #infoEsquerda #custo #custoTotal {
+    display:flex;
 }
 #main #primavera #infoPrimavera #informacoes #infoDireita #imgPlanta {
     width:80px;

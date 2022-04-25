@@ -30,23 +30,29 @@
                 <!-- Div de opções dentro da div infoPrimavera -->
                 <div id="opcoes">
                     <h2>1 - Selecione o que você quer fazer (Escolha apenas uma opção, calcular por ouro ou por quantidade):</h2>
-                    <select name="plantacao">
-                        <optgroup label="Plantas">
-                            <option value="opt1">Selecione o que vai plantar</option>
-                            <option value="opt2">Chirívia</option>
-                            <option value="opt3">Alho</option>
-                            <option value="opt4">Batata</option>
-                            <option value="opt5">Couve</option>
-                            <option value="opt6">Couve-flor</option>
-                            <option value="opt7">Ruibardo</option>
-                            <option value="opt8">Vagem</option>
-                            <option value="opt9">Morango</option>
+                    <!-- Seleção de plantações -->
+                    <select id="plantacao">
+                        <option>Selecione o que vai plantar</option>
+                        <!-- Optgroup de plantas -->
+                        <optgroup label="Plantas de colheitas">
+                            <option value="opt1">Chirívia</option>
+                            <option value="opt2">Alho</option>
+                            <option value="opt3">Batata</option>
+                            <option value="opt4">Couve</option>
+                            <option value="opt5">Couve-flor</option>
+                            <option value="opt6">Ruibardo</option>
+                            <option value="opt7">Vagem</option>
+                            <option value="opt8">Morango</option>
                         </optgroup>
+                        <!-- Fim optgroup de plantas -->
+                        <!-- Optgroup de flores -->
                         <optgroup label="Flores">
-                            <option value="opt10">Tulipa</option>
-                            <option value="opt11">Jasmim-Azul</option>  
+                            <option value="opt9">Tulipa</option>
+                            <option value="opt10">Jasmim-Azul</option>  
                         </optgroup>
+                        <!-- Fim optgroup de flores -->
                     </select>
+                    <!-- Fim seleção de plantações -->
                     <!-- Input para receber quantidade de plantas -->
                     <input id="quantPlantar" type="Number" placeholder="Digite a quantidade para plantar">
                     <!-- Fim input para receber quantidade de plantas -->
@@ -68,7 +74,7 @@
                     <div id="infoEsquerda">
                         <!-- Div quant dentro da div infoEsquerda -->
                         <div id="quant">
-                            <div id="quantPlantas">
+                            <div id="numQuantidade">
                                 <h2>Quantidade: </h2>
                                 <h3>00</h3>
                             </div>
@@ -77,7 +83,11 @@
                         <!-- Div custo dentro da div infoEsquerda -->
                         <div id="custo">
                             <h2>Custo total: </h2>
-                            <h3>00</h3>
+                            <div id="custoTotal">
+                                <img src="./assets/IMG/Ouro.png"
+                                    alt="">
+                                <h3>00</h3>
+                            </div>
                         </div>
                         <!-- Fim div custo dentro da div infoEsquerda -->
                         <!-- Div tempo dentro da div infoEsquerda -->

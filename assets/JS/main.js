@@ -2,10 +2,10 @@ var quantPlanta = document.getElementById('quantPlantar');
 var quantOuro = document.getElementById('quantOuro');
 var opcao = document.getElementById('plantacao');
 var imgPlanta = document.getElementById('imgPlanta');
-var quantidade = document.getElementById('numQuantidade');
+var numQuant = document.getElementById('numQuantidade');
 
 var exibQuantidade = function() {
-    imgPlanta.classList.remove('');
+    imgPlanta.classList = '';
 
     if(quantPlanta.value !== "") {
         alert("Planta");
@@ -19,7 +19,7 @@ var exibQuantidade = function() {
                 imgPlanta.classList.add('alho');
                 break;
             case 'opt3':
-                imgPlanta.classList.add('treix');
+                imgPlanta.classList.add('batata');
                 break;
         };
     }else{

@@ -40,13 +40,34 @@ button:active {
 /* fim definindo classes a serem reaproveitados */
 
 /* classes para utilizar com javascript */
-.padrao {
-    background-image:none;
-}
 .chirivia {
     background-image:url('../IMG/chirivia.png');
 }
 .alho {
+    background-image:url('../IMG/alho.png');
+}
+.batata {
+    background-image:url('../IMG/alho.png');
+}
+.couve {
+    background-image:url('../IMG/alho.png');
+}
+.couve-flor {
+    background-image:url('../IMG/alho.png');
+}
+.ruibardo {
+    background-image:url('../IMG/alho.png');
+}
+.vagem {
+    background-image:url('../IMG/alho.png');
+}
+.morango {
+    background-image:url('../IMG/alho.png');
+}
+.tulipa {
+    background-image:url('../IMG/alho.png');
+}
+.jasmim-azul {
     background-image:url('../IMG/alho.png');
 }
 /* fim classes para utilizar com javascript */
@@ -114,6 +135,8 @@ button:active {
     height:35px;
     box-shadow: inset 0 0 1em #F3C892;
 }
+
+
 #main #primavera #infoPrimavera #botoes {
     width:70%;
     display:flex;

@@ -37,6 +37,9 @@ th, td {
 button:active {
     background-color:#BF8B67;
 }
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
 /* fim definindo classes a serem reaproveitados */
 
 /* classes para utilizar com javascript */
@@ -137,6 +140,7 @@ button:active {
     width:87%;
     height:35px;
     box-shadow: inset 0 0 1em #F3C892;
+    -webkit-appearance: none;
 }
 
 

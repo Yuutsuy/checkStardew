@@ -47,28 +47,31 @@ button:active {
     background-image:url('../IMG/alho.png');
 }
 .batata {
-    background-image:url('../IMG/alho.png');
+    background-image:url('../IMG/batata.png');
 }
 .couve {
-    background-image:url('../IMG/alho.png');
+    background-image:url('../IMG/couve.png');
 }
 .couve-flor {
-    background-image:url('../IMG/alho.png');
+    background-image:url('../IMG/couve-flor.png');
 }
 .ruibardo {
-    background-image:url('../IMG/alho.png');
+    background-image:url('../IMG/ruibardo.png');
 }
 .vagem {
-    background-image:url('../IMG/alho.png');
+    background-image:url('../IMG/vagem.png');
+}
+.cafe {
+    background-image:url('../IMG/cafe.png');
 }
 .morango {
-    background-image:url('../IMG/alho.png');
+    background-image:url('../IMG/morango.png');
 }
 .tulipa {
-    background-image:url('../IMG/alho.png');
+    background-image:url('../IMG/tulipa.png');
 }
 .jasmim-azul {
-    background-image:url('../IMG/alho.png');
+    background-image:url('../IMG/jasmim-azul.png');
 }
 /* fim classes para utilizar com javascript */
 

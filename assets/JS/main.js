@@ -5,63 +5,97 @@ var elOpcao = document.getElementById('plantacao');
 var elImgPlanta = document.getElementById('imgPlanta');
 var elQuant = document.getElementById('numQuantidade');
 var elNumQuant = elQuant.children[1];
+var elCusto = document.getElementById('custoTotal');
+var elNumCusto = elCusto.children[1];
 
 // criando objetos
 var chirivia = {
-    "sementes" : 20,
     "colheita" : 5,
-    "armazem" : "20 ouros",
-    "joja" : "25 ouros",
-    "carrinho" : "100 - 1000 ouros"
+    "armazem" : 20,
+    "joja" : 25,
+    "carrinho" : "100 - 1000 ouros",
+    "mercadoNoturno" : 20,
+    "oasis" : "Não vendido"
 };
 var alho = {
-    "sementes" : 20,
     "colheita" : 5,
-    "armazem" : "40 ouros(a partir do segundo ano)",
+    "armazem" : 40,
     "joja" : "não vendido",
-    "carrinho" : "100 - 1000 ouros"
+    "carrinho" : "100 - 1000 ouros",
+    "mercadoNoturno" : 40,
+    "oasis" : "Não vendido"
 };
 var batata = {
-    "sementes" : 25,
-    "colheita" : 4,
-    "armazem" : "50 ouros",
-    "joja" : "62 ouros",
-    "carrinho" : "100 - 1000 ouros" 
+    "colheita" : 6,
+    "armazem" : 50,
+    "joja" : 62,
+    "carrinho" : "100 - 1000 ouros",
+    "mercadoNoturno" : 50,
+    "oasis" : "Não vendido"
 };
 var couve = {
-    "sementes" : 35,
-    "colheita" : 5,
-    "armazem" : "70 ouros",
-    "joja" : "87 ouros",
-    "carrinho" : "105 - 1000 ouros"
+    "colheita" : 6,
+    "armazem" : 70,
+    "joja" : 87,
+    "carrinho" : "105 - 1000 ouros",
+    "mercadoNoturno" : 70,
+    "oasis" : "Não vendido"
 };
 var couveFlor = {
-    "sementes" : 20,
-    "colheita" : 4
+    "colheita" : 12,
+    "armazem" : 80,
+    "joja" : 100,
+    "carrinho" : "120 - 1000 ouros",
+    "mercadoNoturno" : 80,
+    "oasis" : "Não vendido"
 };
 var ruibardo = {
-    "sementes" : 20,
-    "colheita" : 4
+    "colheita" : 13,
+    "armazem" : "Não vendido",
+    "joja" : "Não vendido",
+    "carrinho" : "150 - 1000 ouros",
+    "mercadoNoturno" : "Não vendido",
+    "oasis" : 100
 };
 var vagem = {
-    "sementes" : 20,
-    "colheita" : 4
+    "colheita" : 10,
+    "armazem" : 60,
+    "joja" : 75,
+    "carrinho" : "100 - 1000 ouros",
+    "mercadoNoturno" : 60,
+    "oasis" : 100
 };
 var cafe = {
-    "sementes" : 20,
-    "colheita" : 4
+    "colheita" : 10,
+    "armazem" : "Não vendido",
+    "joja" : "Não vendido",
+    "carrinho" : "Não vendido",
+    "mercadoNoturno" : "Não vendido",
+    "oasis" : "Não vendido"
 };
 var morango = {
-    "sementes" : 20,
-    "colheita" : 4
+    "colheita" : 8,
+    "armazem" : "Não vendido",
+    "joja" : "Não vendido",
+    "carrinho" : "Não vendido",
+    "mercadoNoturno" : "Não vendido",
+    "oasis" : "Não vendido"
 };
 var tulipa = {
-    "sementes" : 20,
-    "colheita" : 4
+    "colheita" : 7,
+    "armazem" : 30,
+    "joja" : 37,
+    "carrinho" : "100 - 1000 ouros",
+    "mercadoNoturno" : 30,
+    "oasis" : "Não vendido"
 };
 var jarmimAzul = {
-    "sementes" : 20,
-    "colheita" : 4
+    "colheita" : 7,
+    "armazem" : 30,
+    "joja" : 37,
+    "carrinho" : "100 - 1000 ouros",
+    "mercadoNoturno" : 30,
+    "oasis" : "Não vendido"
 };
 
 // chamando a função exibQuantidade
@@ -80,6 +114,11 @@ var exibQuantidade = function() {
                     elNumQuant.innerHTML = `0${elQuantPlanta.value}`;
                 }else{
                     elNumQuant.innerHTML = elQuantPlanta.value;
+                }
+                if(elNumCusto <= 9){
+                    elNumCusto.innerHTML = `${elQuantPlanta.value * chirivia.armazem}`;
+                }else{
+                    elNumCusto.innerHTML = (elQuantPlanta.value * chirivia.armazem);
                 }
                 break;
             case 'opt2':

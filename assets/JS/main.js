@@ -9,7 +9,7 @@ var elCusto = document.getElementById('custoTotal');
 var elNumCusto = elCusto.children[1];
 
 // criando objetos
-var chirivia = {
+var objChirivia = {
     "colheita" : 5,
     "armazem" : 20,
     "joja" : 25,
@@ -17,7 +17,7 @@ var chirivia = {
     "mercadoNoturno" : 20,
     "oasis" : "Não vendido"
 };
-var alho = {
+var objAlho = {
     "colheita" : 5,
     "armazem" : 40,
     "joja" : "não vendido",
@@ -25,7 +25,7 @@ var alho = {
     "mercadoNoturno" : 40,
     "oasis" : "Não vendido"
 };
-var batata = {
+var objBatata = {
     "colheita" : 6,
     "armazem" : 50,
     "joja" : 62,
@@ -33,7 +33,7 @@ var batata = {
     "mercadoNoturno" : 50,
     "oasis" : "Não vendido"
 };
-var couve = {
+var objCouve = {
     "colheita" : 6,
     "armazem" : 70,
     "joja" : 87,
@@ -41,7 +41,7 @@ var couve = {
     "mercadoNoturno" : 70,
     "oasis" : "Não vendido"
 };
-var couveFlor = {
+var objCouveFlor = {
     "colheita" : 12,
     "armazem" : 80,
     "joja" : 100,
@@ -49,7 +49,7 @@ var couveFlor = {
     "mercadoNoturno" : 80,
     "oasis" : "Não vendido"
 };
-var ruibardo = {
+var objRuibardo = {
     "colheita" : 13,
     "armazem" : "Não vendido",
     "joja" : "Não vendido",
@@ -57,7 +57,7 @@ var ruibardo = {
     "mercadoNoturno" : "Não vendido",
     "oasis" : 100
 };
-var vagem = {
+var objVagem = {
     "colheita" : 10,
     "armazem" : 60,
     "joja" : 75,
@@ -65,7 +65,7 @@ var vagem = {
     "mercadoNoturno" : 60,
     "oasis" : 100
 };
-var cafe = {
+var objCafe = {
     "colheita" : 10,
     "armazem" : "Não vendido",
     "joja" : "Não vendido",
@@ -73,7 +73,7 @@ var cafe = {
     "mercadoNoturno" : "Não vendido",
     "oasis" : "Não vendido"
 };
-var morango = {
+var objMorango = {
     "colheita" : 8,
     "armazem" : "Não vendido",
     "joja" : "Não vendido",
@@ -81,7 +81,7 @@ var morango = {
     "mercadoNoturno" : "Não vendido",
     "oasis" : "Não vendido"
 };
-var tulipa = {
+var objTulipa = {
     "colheita" : 7,
     "armazem" : 30,
     "joja" : 37,
@@ -89,7 +89,7 @@ var tulipa = {
     "mercadoNoturno" : 30,
     "oasis" : "Não vendido"
 };
-var jarmimAzul = {
+var objJasmimAzul = {
     "colheita" : 7,
     "armazem" : 30,
     "joja" : 37,
@@ -97,6 +97,7 @@ var jarmimAzul = {
     "mercadoNoturno" : 30,
     "oasis" : "Não vendido"
 };
+
 
 // chamando a função exibQuantidade
 var exibQuantidade = function() {
@@ -114,91 +115,151 @@ var exibQuantidade = function() {
                     elNumQuant.innerHTML = `0${elQuantPlanta.value}`;
                 }else{
                     elNumQuant.innerHTML = elQuantPlanta.value;
-                }
+                };
                 if(elNumCusto <= 9){
-                    elNumCusto.innerHTML = `${elQuantPlanta.value * chirivia.armazem}`;
+                    elNumCusto.innerHTML = (`${elQuantPlanta.value * objChirivia.armazem}`);
                 }else{
-                    elNumCusto.innerHTML = (elQuantPlanta.value * chirivia.armazem);
+                    elNumCusto.innerHTML = (elQuantPlanta.value * objChirivia.armazem);
                 }
                 break;
+                
             case 'opt2':
                 elImgPlanta.classList.add('alho');
                 if(elQuantPlanta.value <= 9){
                     elNumQuant.innerHTML = `0${elQuantPlanta.value}`;
                 }else{
                     elNumQuant.innerHTML = elQuantPlanta.value;
+                };
+                if(elNumCusto <= 9){
+                    elNumCusto.innerHTML = (`${elQuantPlanta.value * objAlho.armazem}`);
+                }else{
+                    elNumCusto.innerHTML = (elQuantPlanta.value * objAlho.armazem);
                 }
                 break;
+
             case 'opt3':
                 elImgPlanta.classList.add('batata');
                 if(elQuantPlanta.value <= 9){
                     elNumQuant.innerHTML = `0${elQuantPlanta.value}`;
                 }else{
                     elNumQuant.innerHTML = elQuantPlanta.value;
+                };
+                if(elNumCusto <= 9){
+                    elNumCusto.innerHTML = (`${elQuantPlanta.value * objBatata.armazem}`);
+                }else{
+                    elNumCusto.innerHTML = (elQuantPlanta.value * objBatata.armazem);
                 }
                 break;
+
             case 'opt4':
                 elImgPlanta.classList.add('couve');
                 if(elQuantPlanta.value <= 9){
                     elNumQuant.innerHTML = `0${elQuantPlanta.value}`;
                 }else{
                     elNumQuant.innerHTML = elQuantPlanta.value;
+                };
+                if(elNumCusto <= 9){
+                    elNumCusto.innerHTML = (`${elQuantPlanta.value * objCouve.armazem}`);
+                }else{
+                    elNumCusto.innerHTML = (elQuantPlanta.value * objCouve.armazem);
                 }
                 break;
+
             case 'opt5':
                 elImgPlanta.classList.add('couve-flor');
                 if(elQuantPlanta.value <= 9){
                     elNumQuant.innerHTML = `0${elQuantPlanta.value}`;
                 }else{
                     elNumQuant.innerHTML = elQuantPlanta.value;
+                };
+                if(elNumCusto <= 9){
+                    elNumCusto.innerHTML = (`${elQuantPlanta.value * objCouveFlor.armazem}`);
+                }else{
+                    elNumCusto.innerHTML = (elQuantPlanta.value * objCouveFlor.armazem);
                 }
                 break;
+
             case 'opt6':
                 elImgPlanta.classList.add('ruibardo');
                 if(elQuantPlanta.value <= 9){
                     elNumQuant.innerHTML = `0${elQuantPlanta.value}`;
                 }else{
                     elNumQuant.innerHTML = elQuantPlanta.value;
+                };
+                if(elNumCusto <= 9){
+                    elNumCusto.innerHTML = (`${elQuantPlanta.value * objRuibardo.armazem}`);
+                }else{
+                    elNumCusto.innerHTML = (elQuantPlanta.value * objRuibardo.armazem);
                 }
                 break;
+
             case 'opt7':
                 elImgPlanta.classList.add('vagem');
                 if(elQuantPlanta.value <= 9){
                     elNumQuant.innerHTML = `0${elQuantPlanta.value}`;
                 }else{
                     elNumQuant.innerHTML = elQuantPlanta.value;
+                };
+                if(elNumCusto <= 9){
+                    elNumCusto.innerHTML = (`${elQuantPlanta.value * objVagem.armazem}`);
+                }else{
+                    elNumCusto.innerHTML = (elQuantPlanta.value * objVagem.armazem);
                 }
                 break;
+
             case 'opt8':
                 elImgPlanta.classList.add('cafe');
                 if(elQuantPlanta.value <= 9){
                     elNumQuant.innerHTML = `0${elQuantPlanta.value}`;
                 }else{
                     elNumQuant.innerHTML = elQuantPlanta.value;
+                };
+                if(elNumCusto <= 9){
+                    elNumCusto.innerHTML = (`${elQuantPlanta.value * objCafe.armazem}`);
+                }else{
+                    elNumCusto.innerHTML = (elQuantPlanta.value * objCafe.armazem);
                 }
                 break;
+
             case 'opt9':
                 elImgPlanta.classList.add('morango');
                 if(elQuantPlanta.value <= 9){
                     elNumQuant.innerHTML = `0${elQuantPlanta.value}`;
                 }else{
                     elNumQuant.innerHTML = elQuantPlanta.value;
+                };
+                if(elNumCusto <= 9){
+                    elNumCusto.innerHTML = (`${elQuantPlanta.value * objMorango.armazem}`);
+                }else{
+                    elNumCusto.innerHTML = (elQuantPlanta.value * objMorango.armazem);
                 }
                 break;
+
             case 'opt10':
                 elImgPlanta.classList.add('tulipa');
                 if(elQuantPlanta.value <= 9){
                     elNumQuant.innerHTML = `0${elQuantPlanta.value}`;
                 }else{
                     elNumQuant.innerHTML = elQuantPlanta.value;
+                };
+                if(elNumCusto <= 9){
+                    elNumCusto.innerHTML = (`${elQuantPlanta.value * objTulipa.armazem}`);
+                }else{
+                    elNumCusto.innerHTML = (elQuantPlanta.value * objTulipa.armazem);
                 }
                 break;
+
             case 'opt11':
                 elImgPlanta.classList.add('jasmim-azul');
                 if(elQuantPlanta.value <= 9){
                     elNumQuant.innerHTML = `0${elQuantPlanta.value}`;
                 }else{
                     elNumQuant.innerHTML = elQuantPlanta.value;
+                };
+                if(elNumCusto <= 9){
+                    elNumCusto.innerHTML = (`${elQuantPlanta.value * obJasmimAzul.armazem}`);
+                }else{
+                    elNumCusto.innerHTML = (elQuantPlanta.value * objJasmimAzul.armazem);
                 }
                 break;
             default:

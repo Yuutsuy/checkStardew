@@ -140,7 +140,8 @@ input::-webkit-inner-spin-button {
     width:87%;
     height:35px;
     box-shadow: inset 0 0 1em #F3C892;
-    -webkit-appearance: none;
+    -webkit-appearance:none; /* remove as setas dos input */
+    outline:none; /* remove as bordar brancas */
 }
 
 

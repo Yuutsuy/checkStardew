@@ -6,7 +6,6 @@ var elImgPlanta = document.getElementById('imgPlanta');
 var elQuant = document.getElementById('numQuantidade');
 var elNumQuant = elQuant.children[1];
 
-
 // criando objetos
 var chirivia = {
     "sementes" : 20,

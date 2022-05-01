@@ -110,12 +110,15 @@ var exibQuantidade = function() {
         // verifica o valor selecionado no id opcoes
         switch(elOpcao.value) {
             case 'opt1':
+                // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('chirivia');
+                // condição para adicionar ou não um 0 ao exibior a quantidade
                 if(elQuantPlanta.value <= 9){
                     elNumQuant.innerHTML = `0${elQuantPlanta.value}`;
                 }else{
                     elNumQuant.innerHTML = elQuantPlanta.value;
                 };
+                // condição para exibir o custo total
                 if(elNumCusto <= 9){
                     elNumCusto.innerHTML = (`0${elQuantPlanta.value * objChirivia.armazem}`);
                 }else{
@@ -124,12 +127,15 @@ var exibQuantidade = function() {
                 break;
                 
             case 'opt2':
+                // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('alho');
+                // condição para adicionar ou não um 0 ao exibior a quantidade
                 if(elQuantPlanta.value <= 9){
                     elNumQuant.innerHTML = `0${elQuantPlanta.value}`;
                 }else{
                     elNumQuant.innerHTML = elQuantPlanta.value;
                 };
+                // condição para exibir o custo total
                 if(elNumCusto <= 9){
                     elNumCusto.innerHTML = (0`${elQuantPlanta.value * objAlho.armazem}`);
                 }else{
@@ -138,12 +144,15 @@ var exibQuantidade = function() {
                 break;
 
             case 'opt3':
+                // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('batata');
+                // condição para adicionar ou não um 0 ao exibior a quantidade
                 if(elQuantPlanta.value <= 9){
                     elNumQuant.innerHTML = `0${elQuantPlanta.value}`;
                 }else{
                     elNumQuant.innerHTML = elQuantPlanta.value;
                 };
+                // condição para exibir o custo total
                 if(elNumCusto <= 9){
                     elNumCusto.innerHTML = (0`${elQuantPlanta.value * objBatata.armazem}`);
                 }else{
@@ -152,12 +161,15 @@ var exibQuantidade = function() {
                 break;
 
             case 'opt4':
+                // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('couve');
+                // condição para adicionar ou não um 0 ao exibior a quantidade
                 if(elQuantPlanta.value <= 9){
                     elNumQuant.innerHTML = `0${elQuantPlanta.value}`;
                 }else{
                     elNumQuant.innerHTML = elQuantPlanta.value;
                 };
+                // condição para exibir o custo total
                 if(elNumCusto <= 9){
                     elNumCusto.innerHTML = (0`${elQuantPlanta.value * objCouve.armazem}`);
                 }else{
@@ -166,12 +178,15 @@ var exibQuantidade = function() {
                 break;
 
             case 'opt5':
+                // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('couve-flor');
+                // condição para adicionar ou não um 0 ao exibior a quantidade
                 if(elQuantPlanta.value <= 9){
                     elNumQuant.innerHTML = `0${elQuantPlanta.value}`;
                 }else{
                     elNumQuant.innerHTML = elQuantPlanta.value;
                 };
+                // condição para exibir o custo total
                 if(elNumCusto <= 9){
                     elNumCusto.innerHTML = (0`${elQuantPlanta.value * objCouveFlor.armazem}`);
                 }else{
@@ -180,12 +195,15 @@ var exibQuantidade = function() {
                 break;
 
             case 'opt6':
+                // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('ruibardo');
+                // condição para adicionar ou não um 0 ao exibior a quantidade
                 if(elQuantPlanta.value <= 9){
                     elNumQuant.innerHTML = `0${elQuantPlanta.value}`;
                 }else{
                     elNumQuant.innerHTML = elQuantPlanta.value;
                 };
+                // condição para exibir o custo total
                 if(elNumCusto <= 9){
                     elNumCusto.innerHTML = (0`${elQuantPlanta.value * objRuibardo.armazem}`);
                 }else{
@@ -194,12 +212,15 @@ var exibQuantidade = function() {
                 break;
 
             case 'opt7':
+                // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('vagem');
+                // condição para adicionar ou não um 0 ao exibior a quantidade
                 if(elQuantPlanta.value <= 9){
                     elNumQuant.innerHTML = `0${elQuantPlanta.value}`;
                 }else{
                     elNumQuant.innerHTML = elQuantPlanta.value;
                 };
+                // condição para exibir o custo total
                 if(elNumCusto <= 9){
                     elNumCusto.innerHTML = (0`${elQuantPlanta.value * objVagem.armazem}`);
                 }else{
@@ -208,12 +229,15 @@ var exibQuantidade = function() {
                 break;
 
             case 'opt8':
+                // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('cafe');
+                // condição para adicionar ou não um 0 ao exibior a quantidade
                 if(elQuantPlanta.value <= 9){
                     elNumQuant.innerHTML = `0${elQuantPlanta.value}`;
                 }else{
                     elNumQuant.innerHTML = elQuantPlanta.value;
                 };
+                // condição para exibir o custo total
                 if(elNumCusto <= 9){
                     elNumCusto.innerHTML = (0`${elQuantPlanta.value * objCafe.armazem}`);
                 }else{
@@ -222,12 +246,15 @@ var exibQuantidade = function() {
                 break;
 
             case 'opt9':
+                // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('morango');
+                // condição para adicionar ou não um 0 ao exibior a quantidade
                 if(elQuantPlanta.value <= 9){
                     elNumQuant.innerHTML = `0${elQuantPlanta.value}`;
                 }else{
                     elNumQuant.innerHTML = elQuantPlanta.value;
                 };
+                // condição para exibir o custo total
                 if(elNumCusto <= 9){
                     elNumCusto.innerHTML = (0`${elQuantPlanta.value * objMorango.armazem}`);
                 }else{
@@ -236,12 +263,15 @@ var exibQuantidade = function() {
                 break;
 
             case 'opt10':
+                // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('tulipa');
+                // condição para adicionar ou não um 0 ao exibior a quantidade
                 if(elQuantPlanta.value <= 9){
                     elNumQuant.innerHTML = `0${elQuantPlanta.value}`;
                 }else{
                     elNumQuant.innerHTML = elQuantPlanta.value;
                 };
+                // condição para exibir o custo total
                 if(elNumCusto <= 9){
                     elNumCusto.innerHTML = (0`${elQuantPlanta.value * objTulipa.armazem}`);
                 }else{
@@ -250,14 +280,17 @@ var exibQuantidade = function() {
                 break;
 
             case 'opt11':
+                // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('jasmim-azul');
-                if(elQuantPlanta.value <= 9){
+                // condição para adicionar ou não um 0 ao exibior a quantidade
+                if(elNumCusto <= 9){
                     elNumQuant.innerHTML = `0${elQuantPlanta.value}`;
                 }else{
                     elNumQuant.innerHTML = elQuantPlanta.value;
                 };
+                // condição para exibir o custo total
                 if(elNumCusto <= 9){
-                    elNumCusto.innerHTML = (0`${elQuantPlanta.value * obJasmimAzul.armazem}`);
+                    elNumCusto.innerHTML = (0`${elQuantPlanta.value * objJasmimAzul.armazem}`);
                 }else{
                     elNumCusto.innerHTML = (elQuantPlanta.value * objJasmimAzul.armazem);
                 }

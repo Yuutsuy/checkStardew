@@ -117,7 +117,7 @@ var exibQuantidade = function() {
                     elNumQuant.innerHTML = elQuantPlanta.value;
                 };
                 if(elNumCusto <= 9){
-                    elNumCusto.innerHTML = (`${elQuantPlanta.value * objChirivia.armazem}`);
+                    elNumCusto.innerHTML = (`0${elQuantPlanta.value * objChirivia.armazem}`);
                 }else{
                     elNumCusto.innerHTML = (elQuantPlanta.value * objChirivia.armazem);
                 }
@@ -131,7 +131,7 @@ var exibQuantidade = function() {
                     elNumQuant.innerHTML = elQuantPlanta.value;
                 };
                 if(elNumCusto <= 9){
-                    elNumCusto.innerHTML = (`${elQuantPlanta.value * objAlho.armazem}`);
+                    elNumCusto.innerHTML = (0`${elQuantPlanta.value * objAlho.armazem}`);
                 }else{
                     elNumCusto.innerHTML = (elQuantPlanta.value * objAlho.armazem);
                 }
@@ -145,7 +145,7 @@ var exibQuantidade = function() {
                     elNumQuant.innerHTML = elQuantPlanta.value;
                 };
                 if(elNumCusto <= 9){
-                    elNumCusto.innerHTML = (`${elQuantPlanta.value * objBatata.armazem}`);
+                    elNumCusto.innerHTML = (0`${elQuantPlanta.value * objBatata.armazem}`);
                 }else{
                     elNumCusto.innerHTML = (elQuantPlanta.value * objBatata.armazem);
                 }
@@ -159,7 +159,7 @@ var exibQuantidade = function() {
                     elNumQuant.innerHTML = elQuantPlanta.value;
                 };
                 if(elNumCusto <= 9){
-                    elNumCusto.innerHTML = (`${elQuantPlanta.value * objCouve.armazem}`);
+                    elNumCusto.innerHTML = (0`${elQuantPlanta.value * objCouve.armazem}`);
                 }else{
                     elNumCusto.innerHTML = (elQuantPlanta.value * objCouve.armazem);
                 }
@@ -173,7 +173,7 @@ var exibQuantidade = function() {
                     elNumQuant.innerHTML = elQuantPlanta.value;
                 };
                 if(elNumCusto <= 9){
-                    elNumCusto.innerHTML = (`${elQuantPlanta.value * objCouveFlor.armazem}`);
+                    elNumCusto.innerHTML = (0`${elQuantPlanta.value * objCouveFlor.armazem}`);
                 }else{
                     elNumCusto.innerHTML = (elQuantPlanta.value * objCouveFlor.armazem);
                 }
@@ -187,7 +187,7 @@ var exibQuantidade = function() {
                     elNumQuant.innerHTML = elQuantPlanta.value;
                 };
                 if(elNumCusto <= 9){
-                    elNumCusto.innerHTML = (`${elQuantPlanta.value * objRuibardo.armazem}`);
+                    elNumCusto.innerHTML = (0`${elQuantPlanta.value * objRuibardo.armazem}`);
                 }else{
                     elNumCusto.innerHTML = (elQuantPlanta.value * objRuibardo.armazem);
                 }
@@ -201,7 +201,7 @@ var exibQuantidade = function() {
                     elNumQuant.innerHTML = elQuantPlanta.value;
                 };
                 if(elNumCusto <= 9){
-                    elNumCusto.innerHTML = (`${elQuantPlanta.value * objVagem.armazem}`);
+                    elNumCusto.innerHTML = (0`${elQuantPlanta.value * objVagem.armazem}`);
                 }else{
                     elNumCusto.innerHTML = (elQuantPlanta.value * objVagem.armazem);
                 }
@@ -215,7 +215,7 @@ var exibQuantidade = function() {
                     elNumQuant.innerHTML = elQuantPlanta.value;
                 };
                 if(elNumCusto <= 9){
-                    elNumCusto.innerHTML = (`${elQuantPlanta.value * objCafe.armazem}`);
+                    elNumCusto.innerHTML = (0`${elQuantPlanta.value * objCafe.armazem}`);
                 }else{
                     elNumCusto.innerHTML = (elQuantPlanta.value * objCafe.armazem);
                 }
@@ -229,7 +229,7 @@ var exibQuantidade = function() {
                     elNumQuant.innerHTML = elQuantPlanta.value;
                 };
                 if(elNumCusto <= 9){
-                    elNumCusto.innerHTML = (`${elQuantPlanta.value * objMorango.armazem}`);
+                    elNumCusto.innerHTML = (0`${elQuantPlanta.value * objMorango.armazem}`);
                 }else{
                     elNumCusto.innerHTML = (elQuantPlanta.value * objMorango.armazem);
                 }
@@ -243,7 +243,7 @@ var exibQuantidade = function() {
                     elNumQuant.innerHTML = elQuantPlanta.value;
                 };
                 if(elNumCusto <= 9){
-                    elNumCusto.innerHTML = (`${elQuantPlanta.value * objTulipa.armazem}`);
+                    elNumCusto.innerHTML = (0`${elQuantPlanta.value * objTulipa.armazem}`);
                 }else{
                     elNumCusto.innerHTML = (elQuantPlanta.value * objTulipa.armazem);
                 }
@@ -257,7 +257,7 @@ var exibQuantidade = function() {
                     elNumQuant.innerHTML = elQuantPlanta.value;
                 };
                 if(elNumCusto <= 9){
-                    elNumCusto.innerHTML = (`${elQuantPlanta.value * obJasmimAzul.armazem}`);
+                    elNumCusto.innerHTML = (0`${elQuantPlanta.value * obJasmimAzul.armazem}`);
                 }else{
                     elNumCusto.innerHTML = (elQuantPlanta.value * objJasmimAzul.armazem);
                 }

@@ -3,9 +3,7 @@ var elQuantPlanta = document.getElementById('quantPlantar');
 var elQuantOuro = document.getElementById('quantOuro');
 var elOpcao = document.getElementById('plantacao');
 var elImgPlanta = document.getElementById('imgPlanta');
-var elQuant = document.getElementById('numQuantidade');
-var elNumQuant = elQuant.children[1];
-var elCusto = document.getElementById('custoTotal');
+var elCusto = document.getElementById('custoArmazem');
 var elNumCusto = elCusto.children[1];
 
 // criando objetos

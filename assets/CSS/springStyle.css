@@ -4,8 +4,8 @@ body {
     background-size: cover;
     background-attachment: fixed;
     font-family: 'Source Sans Pro', sans-serif;
-    color:#E49F01;
-    text-shadow: 1px 2px 0 black;
+    color:#F8CB2E;
+    text-shadow: 2px 2px 0 black;
 }
 /* definindo classes a serem reaproveitados */
 #main .titulo {
@@ -21,9 +21,6 @@ body {
     background-color:navy;
     width:100%;
     height:1px;
-}
-th, td {
-    border: 1px solid black;
 }
 .btn {
     width:150px;
@@ -164,12 +161,21 @@ input::-webkit-inner-spin-button {
     justify-content:space-between;
     padding:1%;
 }
+#main #primavera #infoPrimavera #informacoes #infoEsquerda #quant {
+    height:100%;
+}
+#main #primavera #infoPrimavera #informacoes #infoEsquerda #quant #ajuste {
+    display:flex;
+    flex-direction:column;
+        justify-content:space-between;
+        height:100%;
+}
 #main #primavera #infoPrimavera #informacoes #infoDireita {
     width:50%;
     height:100%;
     padding:10px;
 }
-#main #primavera #infoPrimavera #informacoes #infoEsquerda #custo #custoTotal {
+#main #primavera #infoPrimavera #informacoes #infoEsquerda .custo {
     display:flex;
 }
 #main #primavera #infoPrimavera #informacoes #infoDireita #imgPlanta {

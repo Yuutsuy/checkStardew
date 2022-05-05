@@ -5,7 +5,7 @@ body {
     background-attachment: fixed;
     font-family: 'Source Sans Pro', sans-serif;
     color:#F8CB2E;
-    text-shadow: 2px 2px 0 black;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 /* definindo classes a serem reaproveitados */
 #main .titulo {
@@ -171,13 +171,16 @@ input::-webkit-inner-spin-button {
         justify-content:space-between;
         height:100%;
 }
+#main #primavera #infoPrimavera #informacoes #infoEsquerda .custo {
+    display:flex;
+}
+
 #main #primavera #infoPrimavera #informacoes #infoDireita {
     width:50%;
     height:100%;
     padding:10px;
-}
-#main #primavera #infoPrimavera #informacoes #infoEsquerda .custo {
     display:flex;
+    flex-direction:column;
 }
 #main #primavera #infoPrimavera #informacoes #infoDireita #imgPlanta {
     width:80px;
@@ -187,6 +190,23 @@ input::-webkit-inner-spin-button {
     box-shadow: 0 0 1em white;
     box-shadow: inset 0 0 1em white;
     background-size:100%;
+    display:flex;
+}
+#main #primavera #infoPrimavera #informacoes #infoDireita #exibQuantTotal{
+    margin-top:5px;
+}
+#main #primavera #infoPrimavera #informacoes #infoDireita #diasColheita{
+    margin-top:5px;
+}
+#main #primavera #infoPrimavera #informacoes #infoDireita #info {
+    width:100%;
+    margin-top:5px;
+}
+#main #primavera #infoPrimavera #informacoes #infoDireita #info p{
+    font-size:20px;
+    text-shadow: 0 0 0;
+    color:#8f5100; /* Brown */
+
 }
 
 #main #primavera #maisSobre {

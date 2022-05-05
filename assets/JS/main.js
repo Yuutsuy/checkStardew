@@ -121,7 +121,7 @@ var exibQuantidade = function() {
                 elImgPlanta.classList.add('chirivia');
                 elNumCustoCarrinho.innerHTML = objChirivia.carrinho;
                 elNumCustoOasis.innerHTML = objChirivia.oasis;
-                // condição para exibir o custo total
+                // condição para exibir o custo total como 01, 02, 03 OU 10, 11, 12
                 if(elNumCustoArmazem <= 9 || elNumCustoJoja <= 9 || elNumCustoMercadoNoturno <= 9){
                     elNumCustoArmazem.innerHTML = (`0${elQuantPlanta.value * objChirivia.armazem}`);
                     elNumCustoJoja.innerHTML = (`0${elQuantPlanta.value * objChirivia.joja}`);
@@ -139,7 +139,7 @@ var exibQuantidade = function() {
                 elNumCustoJoja.innerHTML = objAlho.joja;
                 elNumCustoCarrinho.innerHTML = objAlho.carrinho;
                 elNumCustoOasis.innerHTML = objAlho.oasis;
-                // condição para exibir o custo total
+                // condição para exibir o custo total como 01, 02, 03 OU 10, 11, 12
                 if(elNumCustoArmazem <= 9){
                     elNumCustoArmazem.innerHTML = (0`${elQuantPlanta.value * objAlho.armazem}`);
                     elNumCustoMercadoNoturno.innerHTML = (0`${elQuantPlanta.value * objAlho.mercadoNoturno}`);
@@ -152,40 +152,58 @@ var exibQuantidade = function() {
             case 'opt3':
                 // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('batata');
-                // condição para exibir o custo total
-                if(elNumCustoArmazem <= 9){
+                elNumCustoCarrinho.innerHTML = objBatata.carrinho;
+                elNumCustoOasis.innerHTML = objBatata.oasis;
+                // condição para exibir o custo total como 01, 02, 03 OU 10, 11, 12
+                if(elNumCustoArmazem <= 9 || elNumCustoJoja <= 9 || elNumCustoMercadoNoturno <= 9){
                     elNumCustoArmazem.innerHTML = (0`${elQuantPlanta.value * objBatata.armazem}`);
+                    elNumCustoJoja.innerHTML = (0`${elQuantPlanta.value * objBatata.joja}`);
+                    elNumCustoMercadoNoturno.innerHTML = (0`${elQuantPlanta.value * objBatata.mercadoNoturno}`);
                 }else{
                     elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objBatata.armazem);
+                    elNumCustoJoja.innerHTML = (elQuantPlanta.value * objBatata.joja);
+                    elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objBatata.mercadoNoturno);
                 }
                 break;
 
             case 'opt4':
                 // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('couve');
-                // condição para exibir o custo total
-                if(elNumCustoArmazem <= 9){
+                elNumCustoCarrinho.innerHTML = objCouve.carrinho;
+                elNumCustoOasis.innerHTML = objCouve.oasis;
+                // condição para exibir o custo total como 01, 02, 03 OU 10, 11, 12
+                if(elNumCustoArmazem <= 9 || elNumCustoJoja <= 9 || elNumCustoMercadoNoturno <= 9){
                     elNumCustoArmazem.innerHTML = (0`${elQuantPlanta.value * objCouve.armazem}`);
+                    elNumCustoJoja.innerHTML = (0`${elQuantPlanta.value * objCouve.joja}`);
+                    elNumCustoMercadoNoturno.innerHTML = (0`${elQuantPlanta.value * objCouve.mercadoNoturno}`);
                 }else{
                     elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objCouve.armazem);
+                    elNumCustoJoja.innerHTML = (elQuantPlanta.value * objCouve.joja);
+                    elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objCouve.mercadoNoturno);
                 }
                 break;
 
             case 'opt5':
                 // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('couve-flor');
-                // condição para exibir o custo total
-                if(elNumCustoArmazem <= 9){
+                elNumCustoCarrinho.innerHTML = objCouveFlor.carrinho;
+                elNumCustoOasis.innerHTML = objCouveFlor.oasis;
+                // condição para exibir o custo total como 01, 02, 03 OU 10, 11, 12
+                if(elNumCustoArmazem <= 9 || elNumCustoJoja <= 9 || elNumCustoMercadoNoturno <= 9){
                     elNumCustoArmazem.innerHTML = (0`${elQuantPlanta.value * objCouveFlor.armazem}`);
+                    elNumCustoJoja.innerHTML = (0`${elQuantPlanta.value * objCouveFlor.joja}`);
+                    elNumCustoMercadoNoturno.innerHTML = (0`${elQuantPlanta.value * objCouveFlor.mercadoNoturno}`);
                 }else{
                     elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objCouveFlor.armazem);
+                    elNumCustoJoja.innerHTML = (elQuantPlanta.value * objCouveFlor.joja);
+                    elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objCouveFlor.mercadoNoturno);
                 }
                 break;
 
             case 'opt6':
                 // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('ruibardo');
-                // condição para exibir o custo total
+                // condição para exibir o custo total como 01, 02, 03 OU 10, 11, 12
                 elNumCustoArmazem.innerHTML = objRuibardo.armazem;
                 elNumCustoJoja.innerHTML = objRuibardo.joja;
                 elNumCustoCarrinho.innerHTML = objRuibardo.carrinho;
@@ -200,29 +218,41 @@ var exibQuantidade = function() {
             case 'opt7':
                 // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('vagem');
-                // condição para exibir o custo total
-                if(elNumCustoArmazem <= 9){
+                elNumCustoCarrinho.innerHTML = objVagem.carrinho;
+
+                // condição para exibir o custo total como 01, 02, 03 OU 10, 11, 12
+                if(elNumCustoArmazem <= 9 || elNumCustoJoja <= 9 || elNumCustoMercadoNoturno <= 9 || elNumCustoOasis <= 9){
                     elNumCustoArmazem.innerHTML = (0`${elQuantPlanta.value * objVagem.armazem}`);
+                    elNumCustoJoja.innerHTML = (0`${elQuantPlanta.value * objVagem.joja}`);
+                    elNumCustoMercadoNoturno.innerHTML = (0`${elQuantPlanta.value * objVagem.mercadoNoturno}`);
+                    elNumCustoOasis.innerHTML = (0`${elQuantPlanta.value * objVagem.oasis}`);
                 }else{
                     elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objVagem.armazem);
+                    elNumCustoJoja.innerHTML = (elQuantPlanta.value * objVagem.joja);
+                    elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objVagem.mercadoNoturno);
+                    elNumCustoOasis.innerHTML = (elQuantPlanta.value * objVagem.oasis);
                 }
                 break;
 
             case 'opt8':
                 // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('cafe');
-                // condição para exibir o custo total
+                // condição para exibir o custo total como 01, 02, 03 OU 10, 11, 12
                 if(elNumCustoArmazem <= 9){
                     elNumCustoArmazem.innerHTML = (0`${elQuantPlanta.value * objCafe.armazem}`);
                 }else{
                     elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objCafe.armazem);
+                    elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objCafe.joja);
+                    elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objCafe.carrinho);
+                    elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objCafe.mercadoNoturno);
+                    elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objCafe.oasis);
                 }
                 break;
 
             case 'opt9':
                 // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('morango');
-                // condição para exibir o custo total
+                // condição para exibir o custo total como 01, 02, 03 OU 10, 11, 12
                 if(elNumCustoArmazem <= 9){
                     elNumCustoArmazem.innerHTML = (0`${elQuantPlanta.value * objMorango.armazem}`);
                 }else{
@@ -233,7 +263,7 @@ var exibQuantidade = function() {
             case 'opt10':
                 // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('tulipa');
-                // condição para exibir o custo total
+                // condição para exibir o custo total como 01, 02, 03 OU 10, 11, 12
                 if(elNumCustoArmazem <= 9){
                     elNumCustoArmazem.innerHTML = (0`${elQuantPlanta.value * objTulipa.armazem}`);
                 }else{
@@ -244,15 +274,13 @@ var exibQuantidade = function() {
             case 'opt11':
                 // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('jasmim-azul');
-                // condição para exibir o custo total
+                // condição para exibir o custo total como 01, 02, 03 OU 10, 11, 12
                 if(elNumCustoArmazem <= 9){
                     elNumCustoArmazem.innerHTML = (0`${elQuantPlanta.value * objJasmimAzul.armazem}`);
                 }else{
                     elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objJasmimAzul.armazem);
                 }
                 break;
-            default:
-                alert('Isso não é uma opção');
         };
         elQuantPlanta.value = ""; // limpa a caixa de entrada com o id quantPlanta
     }else{

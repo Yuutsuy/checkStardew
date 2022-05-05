@@ -119,12 +119,17 @@ var exibQuantidade = function() {
             case 'opt1':
                 // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('chirivia');
-                
+                elNumCustoCarrinho.innerHTML = objChirivia.carrinho;
+                elNumCustoOasis.innerHTML = objChirivia.oasis;
                 // condição para exibir o custo total
-                if(elNumCustoArmazem <= 9){
+                if(elNumCustoArmazem <= 9 || elNumCustoJoja <= 9 || elNumCustoMercadoNoturno <= 9){
                     elNumCustoArmazem.innerHTML = (`0${elQuantPlanta.value * objChirivia.armazem}`);
+                    elNumCustoJoja.innerHTML = (`0${elQuantPlanta.value * objChirivia.joja}`);
+                    elNumCustoMercadoNoturno.innerHTML = (`0${elQuantPlanta.value * objChirivia.mercadoNoturno}`);
                 }else{
                     elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objChirivia.armazem);
+                    elNumCustoJoja.innerHTML = (elQuantPlanta.value * objChirivia.joja);
+                    elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objChirivia.mercadoNoturno);
                 }
                 break;
                 

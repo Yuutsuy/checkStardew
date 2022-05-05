@@ -27,9 +27,13 @@ body {
     height:25px;
     margin-top:2%; 
     border: 1px solid black;
-    border-radius: 4px;
-    background-color:#DACC96;
+    border-bottom-right-radius:10px;
+    border-top-left-radius:10px;
+    background-image: url('../IMG/btnBackground.png');
+    background-size:cover;
     box-shadow: inset -1px -1px 2px #362222;
+    color:white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 button:active {
     background-color:#BF8B67;
@@ -144,7 +148,7 @@ input::-webkit-inner-spin-button {
 
 
 #main #primavera #infoPrimavera #botoes {
-    width:70%;
+    width:80%;
     display:flex;
     justify-content:space-between;
 }

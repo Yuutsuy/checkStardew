@@ -27,7 +27,7 @@ var objChirivia = {
 var objAlho = {
     "colheita" : 5,
     "armazem" : 40,
-    "joja" : "não vendido",
+    "joja" : "Não vendido",
     "carrinho" : "100 - 1000",
     "mercadoNoturno" : 40,
     "oasis" : "Não vendido"
@@ -136,11 +136,16 @@ var exibQuantidade = function() {
             case 'opt2':
                 // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('alho');
+                elNumCustoJoja.innerHTML = objAlho.joja;
+                elNumCustoCarrinho.innerHTML = objAlho.carrinho;
+                elNumCustoOasis.innerHTML = objAlho.oasis;
                 // condição para exibir o custo total
                 if(elNumCustoArmazem <= 9){
                     elNumCustoArmazem.innerHTML = (0`${elQuantPlanta.value * objAlho.armazem}`);
+                    elNumCustoMercadoNoturno.innerHTML = (0`${elQuantPlanta.value * objAlho.mercadoNoturno}`);
                 }else{
                     elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objAlho.armazem);
+                    elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objAlho.mercadoNoturno);
                 }
                 break;
 

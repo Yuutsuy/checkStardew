@@ -279,13 +279,6 @@ var exibQuantidade = function() {
             case 'opt9':
                 // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('morango');
-                elNumExibQuant.innerHTML = elQuantPlanta.value;
-                // condição para exibir o custo total como 01, 02, 03 OU 10, 11, 12
-                if(elNumCustoArmazem <= 9){
-                    elNumCustoArmazem.innerHTML = (0`${elQuantPlanta.value * objMorango.armazem}`);
-                }else{
-                    elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objMorango.armazem);
-                };
                 elNumColheita.innerHTML = objMorango.colheita;
                 elInfoText.innerHTML = '';
                 break;

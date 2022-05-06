@@ -182,12 +182,9 @@ input::-webkit-inner-spin-button {
 }
 
 #main #primavera #infoPrimavera #informacoes {
-    background-color:#FFF1BD;
     width:100%;
     display:flex;
-    background-color:#ffd382;
-    background-repeat:no-repeat;
-    background-size:cover;
+    background-color:#FFE699;
     font-size:100%;
 }
 #main #primavera #infoPrimavera #informacoes #infoEsquerda {
@@ -223,10 +220,10 @@ input::-webkit-inner-spin-button {
     height:80px;
     float:right;
     background-size:100%;
-    border-top: 2px solid #c37e3b;
-    border-right: 2px solid #c37e3b;
-    border-left: 2px solid #fbcc8c;
-    border-bottom: 2px solid #fbcc8c;
+    border-top: 4px solid #c37e3b;
+    border-right: 4px solid #c37e3b;
+    border-left: 4px solid #fbcc8c;
+    border-bottom: 4px solid #fbcc8c;
     background-color: #ecab62;
     display:flex;
 }

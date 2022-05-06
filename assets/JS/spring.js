@@ -92,7 +92,8 @@ var objMorango = {
     "joja" : "Não vendido",
     "carrinho" : "Não vendido",
     "mercadoNoturno" : "Não vendido",
-    "oasis" : "Não vendido"
+    "oasis" : "Não vendido",
+    "festival" : 100
 };
 var objTulipa = {
     "colheita" : '7 dias',
@@ -125,39 +126,31 @@ var exibQuantidade = function() {
             case 'opt1':
                 // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('chirivia');
+                elNumExibQuant.innerHTML = elQuantPlanta.value;
+                // exibe valor que retorna texto
                 elNumCustoCarrinho.innerHTML = objChirivia.carrinho;
-                elNumCustoOasis.innerHTML = objChirivia.oasis;
-                // condição para exibir o custo total como 01, 02, 03 OU 10, 11, 12
-                if(elNumCustoArmazem <= 9 || elNumCustoJoja <= 9 || elNumCustoMercadoNoturno <= 9){
-                    elNumExibQuant.innerHTML = (`0${elQuantPlanta.value}`);
-                    elNumCustoArmazem.innerHTML = (`0${elQuantPlanta.value * objChirivia.armazem}`);
-                    elNumCustoJoja.innerHTML = (`0${elQuantPlanta.value * objChirivia.joja}`);
-                    elNumCustoMercadoNoturno.innerHTML = (`0${elQuantPlanta.value * objChirivia.mercadoNoturno}`);
-                }else{
-                    elNumExibQuant.innerHTML = elQuantPlanta.value;
-                    elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objChirivia.armazem);
-                    elNumCustoJoja.innerHTML = (elQuantPlanta.value * objChirivia.joja);
-                    elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objChirivia.mercadoNoturno);
-                };
+                elNumCustoOasis.innerHTML = objChirivia.oasis;                
+                // exibe o valor total de cada item para ser gasto na compra das sementes
+                elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objChirivia.armazem);
+                elNumCustoJoja.innerHTML = (elQuantPlanta.value * objChirivia.joja);
+                elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objChirivia.mercadoNoturno);
+                // exibe os dias para colher
                 elNumColheita.innerHTML = objChirivia.colheita;
-                elInfoText.innerHTML = ''
+                elInfoText.innerHTML = '';
                 break;
                 
             case 'opt2':
                 // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('alho');
                 elNumExibQuant.innerHTML = elQuantPlanta.value;
+                // exibe valor que retorna texto
                 elNumCustoJoja.innerHTML = objAlho.joja;
                 elNumCustoCarrinho.innerHTML = objAlho.carrinho;
                 elNumCustoOasis.innerHTML = objAlho.oasis;
-                // condição para exibir o custo total como 01, 02, 03 OU 10, 11, 12
-                if(elNumCustoArmazem <= 9){
-                    elNumCustoArmazem.innerHTML = (0`${elQuantPlanta.value * objAlho.armazem}`);
-                    elNumCustoMercadoNoturno.innerHTML = (0`${elQuantPlanta.value * objAlho.mercadoNoturno}`);
-                }else{
-                    elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objAlho.armazem);
-                    elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objAlho.mercadoNoturno);
-                };
+                // exibe o valor total de cada item para ser gasto na compra das sementes
+                elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objAlho.armazem);
+                elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objAlho.mercadoNoturno);
+                // exibe os dias para colher
                 elNumColheita.innerHTML = objAlho.colheita;
                 elInfoText.innerHTML = '';
                 break;
@@ -166,18 +159,14 @@ var exibQuantidade = function() {
                 // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('batata');
                 elNumExibQuant.innerHTML = elQuantPlanta.value;
+                // exibe valor que retorna texto
                 elNumCustoCarrinho.innerHTML = objBatata.carrinho;
                 elNumCustoOasis.innerHTML = objBatata.oasis;
-                // condição para exibir o custo total como 01, 02, 03 OU 10, 11, 12
-                if(elNumCustoArmazem <= 9 || elNumCustoJoja <= 9 || elNumCustoMercadoNoturno <= 9){
-                    elNumCustoArmazem.innerHTML = (0`${elQuantPlanta.value * objBatata.armazem}`);
-                    elNumCustoJoja.innerHTML = (0`${elQuantPlanta.value * objBatata.joja}`);
-                    elNumCustoMercadoNoturno.innerHTML = (0`${elQuantPlanta.value * objBatata.mercadoNoturno}`);
-                }else{
-                    elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objBatata.armazem);
-                    elNumCustoJoja.innerHTML = (elQuantPlanta.value * objBatata.joja);
-                    elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objBatata.mercadoNoturno);
-                };
+                // exibe o valor total de cada item para ser gasto na compra das sementes
+                elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objBatata.armazem);
+                elNumCustoJoja.innerHTML = (elQuantPlanta.value * objBatata.joja);
+                elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objBatata.mercadoNoturno);
+                // exibe os dias para colher
                 elNumColheita.innerHTML = objBatata.colheita;
                 elInfoText.innerHTML = '';
                 break;
@@ -186,18 +175,14 @@ var exibQuantidade = function() {
                 // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('couve');
                 elNumExibQuant.innerHTML = elQuantPlanta.value;
+                // exibe valor que retorna texto
                 elNumCustoCarrinho.innerHTML = objCouve.carrinho;
                 elNumCustoOasis.innerHTML = objCouve.oasis;
-                // condição para exibir o custo total como 01, 02, 03 OU 10, 11, 12
-                if(elNumCustoArmazem <= 9 || elNumCustoJoja <= 9 || elNumCustoMercadoNoturno <= 9){
-                    elNumCustoArmazem.innerHTML = (0`${elQuantPlanta.value * objCouve.armazem}`);
-                    elNumCustoJoja.innerHTML = (0`${elQuantPlanta.value * objCouve.joja}`);
-                    elNumCustoMercadoNoturno.innerHTML = (0`${elQuantPlanta.value * objCouve.mercadoNoturno}`);
-                }else{
-                    elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objCouve.armazem);
-                    elNumCustoJoja.innerHTML = (elQuantPlanta.value * objCouve.joja);
-                    elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objCouve.mercadoNoturno);
-                };
+                // exibe o valor total de cada item para ser gasto na compra das sementes
+                elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objCouve.armazem);
+                elNumCustoJoja.innerHTML = (elQuantPlanta.value * objCouve.joja);
+                elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objCouve.mercadoNoturno);
+                // exibe os dias para colher
                 elNumColheita.innerHTML = objCouve.colheita;
                 elInfoText.innerHTML = '';
                 break;
@@ -205,19 +190,15 @@ var exibQuantidade = function() {
             case 'opt5':
                 // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('couve-flor');
+                // exibe valor que retorna texto
                 elNumExibQuant.innerHTML = elQuantPlanta.value;
                 elNumCustoCarrinho.innerHTML = objCouveFlor.carrinho;
                 elNumCustoOasis.innerHTML = objCouveFlor.oasis;
-                // condição para exibir o custo total como 01, 02, 03 OU 10, 11, 12
-                if(elNumCustoArmazem <= 9 || elNumCustoJoja <= 9 || elNumCustoMercadoNoturno <= 9){
-                    elNumCustoArmazem.innerHTML = (0`${elQuantPlanta.value * objCouveFlor.armazem}`);
-                    elNumCustoJoja.innerHTML = (0`${elQuantPlanta.value * objCouveFlor.joja}`);
-                    elNumCustoMercadoNoturno.innerHTML = (0`${elQuantPlanta.value * objCouveFlor.mercadoNoturno}`);
-                }else{
-                    elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objCouveFlor.armazem);
-                    elNumCustoJoja.innerHTML = (elQuantPlanta.value * objCouveFlor.joja);
-                    elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objCouveFlor.mercadoNoturno);
-                };
+                // exibe o valor total de cada item para ser gasto na compra das sementes
+                elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objCouveFlor.armazem);
+                elNumCustoJoja.innerHTML = (elQuantPlanta.value * objCouveFlor.joja);
+                elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objCouveFlor.mercadoNoturno);
+                // exibe os dias para colher
                 elNumColheita.innerHTML = objCouveFlor.colheita;
                 elInfoText.innerHTML = '';
                 break;
@@ -226,16 +207,14 @@ var exibQuantidade = function() {
                 // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('ruibardo');
                 elNumExibQuant.innerHTML = elQuantPlanta.value;
-                // condição para exibir o custo total como 01, 02, 03 OU 10, 11, 12
+                // exibe valor que retorna texto
                 elNumCustoArmazem.innerHTML = objRuibardo.armazem;
                 elNumCustoJoja.innerHTML = objRuibardo.joja;
                 elNumCustoCarrinho.innerHTML = objRuibardo.carrinho;
                 elNumCustoMercadoNoturno.innerHTML = objRuibardo.mercadoNoturno;
-                if(elNumCustoOasis <= 9){
-                    elNumCustoOasis.innerHTML = (0`${elQuantPlanta.value * objRuibardo.oasis}`);
-                }else{
-                    elNumCustoOasis.innerHTML = (elQuantPlanta.value * objRuibardo.oasis);
-                };
+                // exibe o valor total de cada item para ser gasto na compra das sementes
+                elNumCustoOasis.innerHTML = (elQuantPlanta.value * objRuibardo.oasis);
+                // exibe os dias para colher
                 elNumColheita.innerHTML = objRuibardo.colheita;
                 elInfoText.innerHTML = '';
                 break;
@@ -243,21 +222,15 @@ var exibQuantidade = function() {
             case 'opt7':
                 // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('vagem');
+                // exibe valor que retorna texto
                 elNumExibQuant.innerHTML = elQuantPlanta.value;
-                elNumCustoCarrinho.innerHTML = objVagem.carrinho;
-
-                // condição para exibir o custo total como 01, 02, 03 OU 10, 11, 12
-                if(elNumCustoArmazem <= 9 || elNumCustoJoja <= 9 || elNumCustoMercadoNoturno <= 9 || elNumCustoOasis <= 9){
-                    elNumCustoArmazem.innerHTML = (0`${elQuantPlanta.value * objVagem.armazem}`);
-                    elNumCustoJoja.innerHTML = (0`${elQuantPlanta.value * objVagem.joja}`);
-                    elNumCustoMercadoNoturno.innerHTML = (0`${elQuantPlanta.value * objVagem.mercadoNoturno}`);
-                    elNumCustoOasis.innerHTML = (0`${elQuantPlanta.value * objVagem.oasis}`);
-                }else{
-                    elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objVagem.armazem);
-                    elNumCustoJoja.innerHTML = (elQuantPlanta.value * objVagem.joja);
-                    elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objVagem.mercadoNoturno);
-                    elNumCustoOasis.innerHTML = (elQuantPlanta.value * objVagem.oasis);
-                };
+                elNumCustoCarrinho.innerHTML = objVagem.carrinho
+                // exibe o valor total de cada item para ser gasto na compra das sementes
+                elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objVagem.armazem);
+                elNumCustoJoja.innerHTML = (elQuantPlanta.value * objVagem.joja);
+                elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objVagem.mercadoNoturno);
+                elNumCustoOasis.innerHTML = (elQuantPlanta.value * objVagem.oasis);
+                // exibe os dias para colher
                 elNumColheita.innerHTML = objVagem.colheita;
                 elInfoText.innerHTML = '';
                 break;
@@ -266,12 +239,13 @@ var exibQuantidade = function() {
                 // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('cafe');
                 elNumExibQuant.innerHTML = elQuantPlanta.value;
-                elNumCustoArmazem.innerHTML = '00';
-                elNumCustoJoja.innerHTML = '00';
-                elNumCustoCarrinho.innerHTML = '00';
-                elNumCustoMercadoNoturno.innerHTML = '00';
-                elNumCustoOasis.innerHTML = '00';
-
+                // exibe valor que retorna texto
+                elNumCustoArmazem.innerHTML = objCafe.armazem;
+                elNumCustoJoja.innerHTML = objCafe.joja;
+                elNumCustoCarrinho.innerHTML = objCafe.carrinho;
+                elNumCustoMercadoNoturno.innerHTML = objCafe.mercadoNoturno;
+                elNumCustoOasis.innerHTML = objCafe.oasis;
+                // exibe os dias para colher
                 elNumColheita.innerHTML = objCafe.colheita;
                 elInfoText.innerHTML = ('Um Grão de café é ao mesmo tempo um cultivo e uma semente que pode ser plantada. Os grãos de café crescem e amadurecem 10 dias após serem plantados (e a cada 2 dias em diante) tanto na primavera quanto no verão. Colocar 5 grãos de café dentro de um Barril produzirá Café.');
                 break;
@@ -279,6 +253,7 @@ var exibQuantidade = function() {
             case 'opt9':
                 // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('morango');
+                // exibe os dias para colher
                 elNumColheita.innerHTML = objMorango.colheita;
                 elInfoText.innerHTML = '';
                 break;
@@ -287,12 +262,14 @@ var exibQuantidade = function() {
                 // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('tulipa');
                 elNumExibQuant.innerHTML = elQuantPlanta.value;
-                // condição para exibir o custo total como 01, 02, 03 OU 10, 11, 12
-                if(elNumCustoArmazem <= 9){
-                    elNumCustoArmazem.innerHTML = (0`${elQuantPlanta.value * objTulipa.armazem}`);
-                }else{
-                    elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objTulipa.armazem);
-                };
+                // exibe valor que retorna texto
+                elNumCustoCarrinho.innerHTML = objTulipa.carrinho;
+                elNumCustoOasis.innerHTML = objTulipa.oasis;
+                // exibe o valor total de cada item para ser gasto na compra das sementes
+                elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objTulipa.armazem);
+                elNumCustoJoja.innerHTML = (elQuantPlanta.value * objTulipa.joja);
+                elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objTulipa.mercadoNoturno);
+                // exibe os dias para colher
                 elNumColheita.innerHTML = objTulipa.colheita;
                 elInfoText.innerHTML = '';
                 break;
@@ -301,12 +278,9 @@ var exibQuantidade = function() {
                 // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('jasmim-azul');
                 elNumExibQuant.innerHTML = elQuantPlanta.value;
-                // condição para exibir o custo total como 01, 02, 03 OU 10, 11, 12
-                if(elNumCustoArmazem <= 9){
-                    elNumCustoArmazem.innerHTML = (0`${elQuantPlanta.value * objJasmimAzul.armazem}`);
-                }else{
-                    elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objJasmimAzul.armazem);
-                };
+                // exibe o valor total de cada item para ser gasto na compra das sementes
+                elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objJasmimAzul.armazem);
+                // exibe os dias para colher
                 elNumColheita.innerHTML = objJasmimAzul.colheita;
                 elInfoText.innerHTML = '';
                 break;

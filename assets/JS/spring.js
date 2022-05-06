@@ -3,9 +3,10 @@ var elQuantPlanta = document.getElementById('quantPlantar');
 var elQuantOuro = document.getElementById('quantOuro');
 var elOpcao = document.getElementById('plantacao');
 var elImgPlanta = document.getElementById('imgPlanta');
+var elColheita = document.getElementById('diasColheita');
+var elNumColheita = elColheita.children[1];
 var elInfo = document.getElementById('info');
 var elInfoText = elInfo.children[0];
-var elColheita = document.getElementById('diasColheita');
 
 var elCustoArmazem = document.getElementById('custoArmazem');
 var elNumCustoArmazem = elCustoArmazem.children[1];
@@ -22,7 +23,7 @@ var elNumExibQuant = elExibiQuantidade.children[1];
 
 // criando objetos
 var objChirivia = {
-    "colheita" : 5,
+    "colheita" : '5 dias',
     "armazem" : 20,
     "joja" : 25,
     "carrinho" : "100 - 1000",
@@ -30,7 +31,7 @@ var objChirivia = {
     "oasis" : "Não vendido"
 };
 var objAlho = {
-    "colheita" : 5,
+    "colheita" : '5 dias',
     "armazem" : 40,
     "joja" : "Não vendido",
     "carrinho" : "100 - 1000",
@@ -38,7 +39,7 @@ var objAlho = {
     "oasis" : "Não vendido"
 };
 var objBatata = {
-    "colheita" : 6,
+    "colheita" : '6 dias',
     "armazem" : 50,
     "joja" : 62,
     "carrinho" : "100 - 1000",
@@ -46,7 +47,7 @@ var objBatata = {
     "oasis" : "Não vendido"
 };
 var objCouve = {
-    "colheita" : 6,
+    "colheita" : '6 dias',
     "armazem" : 70,
     "joja" : 87,
     "carrinho" : "105 - 1000",
@@ -54,7 +55,7 @@ var objCouve = {
     "oasis" : "Não vendido"
 };
 var objCouveFlor = {
-    "colheita" : 12,
+    "colheita" : '12 dias',
     "armazem" : 80,
     "joja" : 100,
     "carrinho" : "120 - 1000",
@@ -62,7 +63,7 @@ var objCouveFlor = {
     "oasis" : "Não vendido"
 };
 var objRuibardo = {
-    "colheita" : 13,
+    "colheita" : '13 dias',
     "armazem" : "Não vendido",
     "joja" : "Não vendido",
     "carrinho" : "150 - 1000",
@@ -70,7 +71,7 @@ var objRuibardo = {
     "oasis" : 100
 };
 var objVagem = {
-    "colheita" : 10,
+    "colheita" : '10 dias',
     "armazem" : 60,
     "joja" : 75,
     "carrinho" : "100 - 1000",
@@ -78,7 +79,7 @@ var objVagem = {
     "oasis" : 100
 };
 var objCafe = {
-    "colheita" : 10,
+    "colheita" : '10 dias',
     "armazem" : "Não vendido",
     "joja" : "Não vendido",
     "carrinho" : "Não vendido",
@@ -86,7 +87,7 @@ var objCafe = {
     "oasis" : "Não vendido"
 };
 var objMorango = {
-    "colheita" : 8,
+    "colheita" : '8 dias',
     "armazem" : "Não vendido",
     "joja" : "Não vendido",
     "carrinho" : "Não vendido",
@@ -94,7 +95,7 @@ var objMorango = {
     "oasis" : "Não vendido"
 };
 var objTulipa = {
-    "colheita" : 7,
+    "colheita" : '7 dias',
     "armazem" : 30,
     "joja" : 37,
     "carrinho" : "100 - 1000",
@@ -102,7 +103,7 @@ var objTulipa = {
     "oasis" : "Não vendido"
 };
 var objJasmimAzul = {
-    "colheita" : 7,
+    "colheita" : '7 dias',
     "armazem" : 30,
     "joja" : 37,
     "carrinho" : "100 - 1000",
@@ -124,20 +125,22 @@ var exibQuantidade = function() {
             case 'opt1':
                 // chama a classe css indicada dentro do método add
                 elImgPlanta.classList.add('chirivia');
-                elNumExibQuant.innerHTML = elQuantPlanta.value;
                 elNumCustoCarrinho.innerHTML = objChirivia.carrinho;
                 elNumCustoOasis.innerHTML = objChirivia.oasis;
                 // condição para exibir o custo total como 01, 02, 03 OU 10, 11, 12
                 if(elNumCustoArmazem <= 9 || elNumCustoJoja <= 9 || elNumCustoMercadoNoturno <= 9){
+                    elNumExibQuant.innerHTML = (`0${elQuantPlanta.value}`);
                     elNumCustoArmazem.innerHTML = (`0${elQuantPlanta.value * objChirivia.armazem}`);
                     elNumCustoJoja.innerHTML = (`0${elQuantPlanta.value * objChirivia.joja}`);
                     elNumCustoMercadoNoturno.innerHTML = (`0${elQuantPlanta.value * objChirivia.mercadoNoturno}`);
                 }else{
+                    elNumExibQuant.innerHTML = elQuantPlanta.value;
                     elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objChirivia.armazem);
                     elNumCustoJoja.innerHTML = (elQuantPlanta.value * objChirivia.joja);
                     elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objChirivia.mercadoNoturno);
                 };
-                elInfo.innerHTML = '';
+                elNumColheita.innerHTML = objChirivia.colheita;
+                elInfoText.innerHTML = ''
                 break;
                 
             case 'opt2':
@@ -155,7 +158,8 @@ var exibQuantidade = function() {
                     elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objAlho.armazem);
                     elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objAlho.mercadoNoturno);
                 };
-                elInfo.innerHTML = '';
+                elNumColheita.innerHTML = objAlho.colheita;
+                elInfoText.innerHTML = '';
                 break;
 
             case 'opt3':
@@ -174,7 +178,8 @@ var exibQuantidade = function() {
                     elNumCustoJoja.innerHTML = (elQuantPlanta.value * objBatata.joja);
                     elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objBatata.mercadoNoturno);
                 };
-                elInfo.innerHTML = '';
+                elNumColheita.innerHTML = objBatata.colheita;
+                elInfoText.innerHTML = '';
                 break;
 
             case 'opt4':
@@ -193,7 +198,8 @@ var exibQuantidade = function() {
                     elNumCustoJoja.innerHTML = (elQuantPlanta.value * objCouve.joja);
                     elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objCouve.mercadoNoturno);
                 };
-                elInfo.innerHTML = '';
+                elNumColheita.innerHTML = objCouve.colheita;
+                elInfoText.innerHTML = '';
                 break;
 
             case 'opt5':
@@ -212,7 +218,8 @@ var exibQuantidade = function() {
                     elNumCustoJoja.innerHTML = (elQuantPlanta.value * objCouveFlor.joja);
                     elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objCouveFlor.mercadoNoturno);
                 };
-                elInfo.innerHTML = '';
+                elNumColheita.innerHTML = objCouveFlor.colheita;
+                elInfoText.innerHTML = '';
                 break;
 
             case 'opt6':
@@ -229,7 +236,8 @@ var exibQuantidade = function() {
                 }else{
                     elNumCustoOasis.innerHTML = (elQuantPlanta.value * objRuibardo.oasis);
                 };
-                elInfo.innerHTML = '';
+                elNumColheita.innerHTML = objRuibardo.colheita;
+                elInfoText.innerHTML = '';
                 break;
 
             case 'opt7':
@@ -250,7 +258,8 @@ var exibQuantidade = function() {
                     elNumCustoMercadoNoturno.innerHTML = (elQuantPlanta.value * objVagem.mercadoNoturno);
                     elNumCustoOasis.innerHTML = (elQuantPlanta.value * objVagem.oasis);
                 };
-                elInfo.innerHTML = '';
+                elNumColheita.innerHTML = objVagem.colheita;
+                elInfoText.innerHTML = '';
                 break;
 
             case 'opt8':
@@ -263,6 +272,7 @@ var exibQuantidade = function() {
                 elNumCustoMercadoNoturno.innerHTML = '00';
                 elNumCustoOasis.innerHTML = '00';
 
+                elNumColheita.innerHTML = objCafe.colheita;
                 elInfoText.innerHTML = ('Um Grão de café é ao mesmo tempo um cultivo e uma semente que pode ser plantada. Os grãos de café crescem e amadurecem 10 dias após serem plantados (e a cada 2 dias em diante) tanto na primavera quanto no verão. Colocar 5 grãos de café dentro de um Barril produzirá Café.');
                 break;
 
@@ -276,7 +286,8 @@ var exibQuantidade = function() {
                 }else{
                     elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objMorango.armazem);
                 };
-                elInfo.innerHTML = '';
+                elNumColheita.innerHTML = objMorango.colheita;
+                elInfoText.innerHTML = '';
                 break;
 
             case 'opt10':
@@ -289,7 +300,8 @@ var exibQuantidade = function() {
                 }else{
                     elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objTulipa.armazem);
                 };
-                elInfo.innerHTML = '';
+                elNumColheita.innerHTML = objTulipa.colheita;
+                elInfoText.innerHTML = '';
                 break;
 
             case 'opt11':
@@ -302,7 +314,8 @@ var exibQuantidade = function() {
                 }else{
                     elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objJasmimAzul.armazem);
                 };
-                elInfo.innerHTML = '';
+                elNumColheita.innerHTML = objJasmimAzul.colheita;
+                elInfoText.innerHTML = '';
                 break;
         };
         elQuantPlanta.value = ""; // limpa a caixa de entrada com o id quantPlanta

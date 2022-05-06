@@ -1,4 +1,8 @@
 @import './assets/CSS/springStyle.css';
+@font-face {
+    font-family: "pixelFont";
+    src: url(./assets/FONTS/VT323-Regular.ttf);
+}
 
 * {
     margin:0;

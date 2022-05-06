@@ -3,8 +3,9 @@ var elQuantPlanta = document.getElementById('quantPlantar');
 var elQuantOuro = document.getElementById('quantOuro');
 var elOpcao = document.getElementById('plantacao');
 var elImgPlanta = document.getElementById('imgPlanta');
-var elInformacao = document.getElementById('info');
-var elInfo = elInformacao.children[0];
+var elInfo = document.getElementById('info');
+var elInfoText = elInfo.children[0];
+var elColheita = document.getElementById('diasColheita');
 
 var elCustoArmazem = document.getElementById('custoArmazem');
 var elNumCustoArmazem = elCustoArmazem.children[1];
@@ -262,7 +263,7 @@ var exibQuantidade = function() {
                 elNumCustoMercadoNoturno.innerHTML = '00';
                 elNumCustoOasis.innerHTML = '00';
 
-                elInfo.innerHTML = ('Um Grão de café é ao mesmo tempo um cultivo e uma semente que pode ser plantada. Os grãos de café crescem e amadurecem 10 dias após serem plantados (e a cada 2 dias em diante) tanto na primavera quanto no verão. Colocar 5 grãos de café dentro de um Barril produzirá Café.');
+                elInfoText.innerHTML = ('Um Grão de café é ao mesmo tempo um cultivo e uma semente que pode ser plantada. Os grãos de café crescem e amadurecem 10 dias após serem plantados (e a cada 2 dias em diante) tanto na primavera quanto no verão. Colocar 5 grãos de café dentro de um Barril produzirá Café.');
                 break;
 
             case 'opt9':

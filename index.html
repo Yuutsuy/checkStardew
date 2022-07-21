@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./main.css">
-    <link rel="shortcut icon" href="./assets/IMG/Junimo.png">
+    <link rel="shortcut icon" href="./assets/IMG/icon.png">
     <title>Stardew Check</title>
 </head>
 <body>
@@ -29,7 +29,7 @@
             <div id="infoPrimavera">
                 <!-- Div de opções dentro da div infoPrimavera -->
                 <div id="opcoes">
-                    <h2>1 - Selecione o que você quer fazer (Escolha apenas uma opção, calcular por ouro ou por quantidade):</h2>
+                    <h2>1 - Selecione o que você quer fazer (escolha apenas uma opção, calcular por ouro ou por quantidade):</h2>
                     <!-- Seleção de plantações -->
                     <select id="plantacao">
                         <option>Selecione o que vai plantar</option>
@@ -41,7 +41,7 @@
                             <option value="opt4">Couve</option>
                             <option value="opt5">Couve-flor</option>
                             <option value="opt6">Ruibardo</option>
-                            <option value="opt7">Vagem</option>
+                            <option value="opt7">Vagem(Feijão)</option>
                             <option value="opt8">Café</option>
                             <option value="opt9">Morango</option>
                         </optgroup>
@@ -55,10 +55,10 @@
                     </select>
                     <!-- Fim seleção de plantações -->
                     <!-- Input para receber quantidade de plantas -->
-                    <input id="quantPlantar" type="Number" placeholder="Digite a quantidade para plantar">
+                    <input id="quantPlantar" type="Number" placeholder="Digite a quantidade de sementes para plantar">
                     <!-- Fim input para receber quantidade de plantas -->
                     <!-- Input para receber quantidade de ouro -->
-                    <input id="quantOuro" type="Number" placeholder="Digite a quantidade de ouro que deseja gastar">
+                    <input id="quantOuro" type="Number" placeholder="Digite quantos ouros deseja gastar">
                     <!-- Fim input para receber quantidade de ouro -->
                     <br/>
                     <!-- Div de botões -->
@@ -77,7 +77,7 @@
                         <div id="quant">
                             <div id="ajuste">
                                 <div id="resultArmazem">
-                                    <h2>Armazem:</h2>
+                                    <h2>Pierre:</h2>
                                     <div id="custoArmazem" class="custo">
                                         <img src="./assets/IMG/Ouro.png"
                                         alt="Ouro">
@@ -125,31 +125,37 @@
                         <!-- Div imgPlanta dentro da div infoDireita -->
                         <div id="imgPlanta"></div>
                         <!-- Fim div imgPlanta dentro da div infoDireita -->
+                        <!-- Div da quantidade total de sementes exibida -->
                         <div id="exibQuantTotal">
                             <h2>Quantidade total:</h2>
                             <h3>00</h3>
                         </div>
+                        <!-- Fim div da quantidade total de sementes exibida -->
+                        <!-- Div do dia para colheita -->
                         <div id="diasColheita">
                             <h2>Dias para Colheita:</h2>
                             <h3>0 dias</h3>
                         </div>
+                        <!-- Fim div do dia para colheita -->
+                        <!-- Div de informações adicionais -->
                         <div id="info">
                             <p></p>
                         </div>
+                        <!-- Fim div de informações adicionais -->
                     </div>
                     <!-- Fim div infoDireita dentro da div informacoes -->
                 </div>
                 <!-- Fim div informações dentro da div infoPrimavera -->
             </div>
             <!-- Fim div de infoPrimavera -->
-            <!-- Div mais sobre -->
-            <div id="maisSobre">
+            <!-- Div informacoesCalendario -->
+            <div id="informacoesCalendario">
                 <!-- Div calenPrimavera dentro da div infoDireita -->
-            <div id="calenPrimavera">
+                <div id="calenPrimavera">
+                </div>
+                <!-- Fim div calendário da primavera dentro da div plantas -->
             </div>
-            <!-- Fim div calendário da primavera dentro da div plantas -->
-            </div>
-            <!-- Fim div mais sobre -->
+            <!-- Fim div informacoesCalendario -->
         </section>
         <!-- Fim section primavera -->
     </div>

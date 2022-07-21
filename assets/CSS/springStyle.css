@@ -3,9 +3,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    font-family: 'pixelFont';
+    font-family: 'bodyFont';
     color:#F8CB2E;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: -1px 0 1px black, 0 1px 1px black, 1px 0 1px black, 0 -1px 1px black;
 }
 /* definindo classes a serem reaproveitados */
 #main .titulo {
@@ -32,7 +32,6 @@ body {
     border-right: 2px solid #c37e3b;
     border-left: 2px solid #fbcc8c;
     border-bottom: 2px solid #c37e3b;
-    background-color: #FAFFAF;
     box-shadow: inset -1px -1px 2px #362222;
     color:#F9EBC8;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -52,7 +51,7 @@ body {
 }
 /* fim definindo classes a serem reaproveitados */
 
-/* Definindo css para a página inteira */
+/* Definindo css para a scrollbar */
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
   }
@@ -64,13 +63,13 @@ input::-webkit-inner-spin-button {
   body::-webkit-scrollbar-thumb{
       width:10px;
       height:auto;
-      border-top: 2px solid #fbcc8c;
+      border-top: 2px solid #c37e3b;
       border-right: 2px solid #c37e3b;
       border-left: 2px solid #fbcc8c;
-      border-bottom: 2px solid #c37e3b;
+      border-bottom: 2px solid #fbcc8c;
       background-color:#FAFFAF;
   }
-/* Fim definindo css para a página inteira */
+/* Fim definindo css para a scrollbar */
 
 /* classes para utilizar com javascript */
 .chirivia {
@@ -153,7 +152,7 @@ input::-webkit-inner-spin-button {
     font-size:30px;
 }
 #main #primavera #infoPrimavera #opcoes h2 {
-    font-size:100%;
+    font-size:87%;
 }
 #main #primavera #infoPrimavera #opcoes select {
     border: 1px solid black;
@@ -240,18 +239,18 @@ input::-webkit-inner-spin-button {
     margin-top:5px;
 }
 #main #primavera #infoPrimavera #informacoes #infoDireita #info p{
-    font-size:25px;
+    font-size:100%;
     text-shadow: 0 0 0;
     color:#EEEEEE; /* Brown */
     text-shadow: -1px 0 #062C30, 0 1px #062C30, 1px 0 #062C30, 0 -1px #062C30;
 }
 
-#main #primavera #maisSobre {
+#main #primavera #informacoesCalendario {
     width:100%;
     height:355px;
     display:flex;
 }
-#main #maisSobre #calenPrimavera {
+#main #informacoesCalendario #calenPrimavera {
     width:480px;
     height:336px;
     margin-top:15px;

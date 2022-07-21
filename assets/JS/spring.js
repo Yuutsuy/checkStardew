@@ -111,6 +111,14 @@ var objJasmimAzul = {
     "mercadoNoturno" : 30,
     "oasis" : "Não vendido"
 };
+var objRepolho = {
+    "colheita" : "9 dias",
+    "armazem" : 100,
+    "joja" : "Não vendido",
+    "carrinho" : "150 - 1000",
+    "mercadoNoturno" : 100,
+    "oasis" : "Não vendido" 
+};
 
 
 // chamando a função exibQuantidade
@@ -124,7 +132,7 @@ var exibQuantidade = function() {
         // verifica o valor selecionado no id opcoes
         switch(elOpcao.value) {
             case 'opt1':
-                // chama a classe css indicada dentro do método add
+                // chama a imagem da chirivia
                 elImgPlanta.classList.add('chirivia');
                 elNumExibQuant.innerHTML = elQuantPlanta.value;
                 // exibe valor que retorna texto
@@ -140,7 +148,7 @@ var exibQuantidade = function() {
                 break;
                 
             case 'opt2':
-                // chama a classe css indicada dentro do método add
+                // chama a imagem do alho
                 elImgPlanta.classList.add('alho');
                 elNumExibQuant.innerHTML = elQuantPlanta.value;
                 // exibe valor que retorna texto
@@ -156,7 +164,7 @@ var exibQuantidade = function() {
                 break;
 
             case 'opt3':
-                // chama a classe css indicada dentro do método add
+                // chama a imagem da batata
                 elImgPlanta.classList.add('batata');
                 elNumExibQuant.innerHTML = elQuantPlanta.value;
                 // exibe valor que retorna texto
@@ -172,7 +180,7 @@ var exibQuantidade = function() {
                 break;
 
             case 'opt4':
-                // chama a classe css indicada dentro do método add
+                // chama a imagem da couve
                 elImgPlanta.classList.add('couve');
                 elNumExibQuant.innerHTML = elQuantPlanta.value;
                 // exibe valor que retorna texto
@@ -188,7 +196,7 @@ var exibQuantidade = function() {
                 break;
 
             case 'opt5':
-                // chama a classe css indicada dentro do método add
+                // chama a imagem da couve-flor
                 elImgPlanta.classList.add('couve-flor');
                 // exibe valor que retorna texto
                 elNumExibQuant.innerHTML = elQuantPlanta.value;
@@ -204,7 +212,7 @@ var exibQuantidade = function() {
                 break;
 
             case 'opt6':
-                // chama a classe css indicada dentro do método add
+                // chama a imagem do ruibardo
                 elImgPlanta.classList.add('ruibardo');
                 elNumExibQuant.innerHTML = elQuantPlanta.value;
                 // exibe valor que retorna texto
@@ -220,7 +228,7 @@ var exibQuantidade = function() {
                 break;
 
             case 'opt7':
-                // chama a classe css indicada dentro do método add
+                // chama a imagem da vagem
                 elImgPlanta.classList.add('vagem');
                 // exibe valor que retorna texto
                 elNumExibQuant.innerHTML = elQuantPlanta.value;
@@ -236,7 +244,7 @@ var exibQuantidade = function() {
                 break;
 
             case 'opt8':
-                // chama a classe css indicada dentro do método add
+                // chama a imagem do cafe
                 elImgPlanta.classList.add('cafe');
                 elNumExibQuant.innerHTML = elQuantPlanta.value;
                 // exibe valor que retorna texto
@@ -251,15 +259,21 @@ var exibQuantidade = function() {
                 break;
 
             case 'opt9':
-                // chama a classe css indicada dentro do método add
+                // chama a imagem do morango
                 elImgPlanta.classList.add('morango');
                 // exibe os dias para colher
                 elNumColheita.innerHTML = objMorango.colheita;
-                elInfoText.innerHTML = '';
+                elNumExibQuant.innerHTML = elQuantPlanta.value;
+                elNumCustoJoja.innerHTML = objMorango.joja;
+                elNumCustoCarrinho.innerHTML = objMorango.carrinho;
+                elNumCustoMercadoNoturno.innerHTML = objMorango.mercadoNoturno;
+                elNumCustoOasis.innerHTML = objMorango.oasis;
+                elNumCustoArmazem.innerHTML = (elQuantPlanta.value * objMorango.festival);
+                elInfoText.innerHTML = `Sementes de morango são um tipo de semente. Plantas maduras produzem Morangos. Elas podem ser compradas por ${objMorango.festival} ouros cada no Festival do Ovo`;
                 break;
 
             case 'opt10':
-                // chama a classe css indicada dentro do método add
+                // chama a imagem da tulipa
                 elImgPlanta.classList.add('tulipa');
                 elNumExibQuant.innerHTML = elQuantPlanta.value;
                 // exibe valor que retorna texto
@@ -275,7 +289,7 @@ var exibQuantidade = function() {
                 break;
 
             case 'opt11':
-                // chama a classe css indicada dentro do método add
+                // cchama a imagem da jasmin-azul
                 elImgPlanta.classList.add('jasmim-azul');
                 elNumExibQuant.innerHTML = elQuantPlanta.value;
                 // exibe o valor total de cada item para ser gasto na compra das sementes
@@ -287,7 +301,7 @@ var exibQuantidade = function() {
         };
         elQuantPlanta.value = ""; // limpa a caixa de entrada com o id quantPlanta
     }else{
-        alert('Digite algo no campo de quantidade de plantas');
+        alert('Digite algo no campo QUANTIDADE DE PLANTAS');
     }
 }
 
@@ -299,11 +313,11 @@ var exibOuro = function() {
     if(elQuantOuro.value !== "") {
         // alert("Ouro");
         // alert(elQuantOuro.value);
-        elQuantOuro.value = ""; // limpa a caixa de entrada elQuantOuro
         // verifica o valor selecionado no id opcoes
         switch(elOpcao.value) {
             case 'opt1':
                 elImgPlanta.classList.add('chirivia');
+                elNumCustoArmazem.innerHTML = Math.floor(elQuantOuro.value / objChirivia.armazem);
                 break;
             case 'opt2':
                 elImgPlanta.classList.add('alho');
@@ -336,7 +350,8 @@ var exibOuro = function() {
                 elImgPlanta.classList.add('jasmim-azul');
                 break;
         };
+        elQuantOuro.value = ""; // limpa a caixa de entrada elQuantOuro
     }else{
-        alert('Digite algo no campo de quantidade de ouro');
+        alert('Digite algo no campo QUANTIDADE DE OURO');
     }
 }

@@ -316,12 +316,6 @@ var exibOuro = function() {
     if(elQuantOuro.value !== "") {
         // alert("Ouro");
         // alert(elQuantOuro.value);
-         //condição para exibir a quantidade no formato de 08, 09, 10, 11
-        if(elQuantPlanta.value < 10){
-            elNumExibQuant.innerHTML = (`0${elQuantPlanta.value}`)
-        }else{
-            elNumExibQuant.innerHTML = elQuantPlanta.value 
-        };
         // verifica o valor selecionado no id opcoes
         switch(elOpcao.value) {
             case 'opt1':
@@ -337,7 +331,16 @@ var exibOuro = function() {
                 elNumColheita.innerHTML = objChirivia.colheita;
                 break;
             case 'opt2':
+                // chama a imagem do alho
                 elImgPlanta.classList.add('alho');
+                // calcula a quantidade de semente, e arredonda para baixo
+                elNumCustoArmazem.innerHTML = Math.floor(elQuantOuro.value / objChirivia.armazem);
+                elNumCustoJoja.innerHTML = objAlho.joja;
+                elNumCustoCarrinho.innerText = objAlho.carrinho;
+                elNumCustoMercadoNoturno.innerHTML = Math.floor(elQuantOuro.value / objAlho.mercadoNoturno);
+                elNumCustoOasis.innerText = objAlho.oasis;
+                // exibe os dias para colher
+                elNumColheita.innerHTML = objAlho.colheita;
                 break;
             case 'opt3':
                 elImgPlanta.classList.add('batata');

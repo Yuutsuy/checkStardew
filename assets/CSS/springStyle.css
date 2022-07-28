@@ -46,9 +46,6 @@ body {
     background-size:cover;
     outline:none; /* remove a borda branca em volta do botão */
 }
-.btn:hover{
-    border-style:unset;
-}
 /* fim definindo classes a serem reaproveitados */
 
 /* Definindo css para a scrollbar */

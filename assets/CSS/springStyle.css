@@ -26,12 +26,8 @@ body {
     width:150px;
     height:25px;
     margin-top:2%; 
-    border: 1px solid black;
+    border: 1px solid #fbcc8c;
     border-radius: 10px;
-    border-top: 2px solid #fbcc8c;
-    border-right: 2px solid #c37e3b;
-    border-left: 2px solid #fbcc8c;
-    border-bottom: 2px solid #c37e3b;
     box-shadow: inset -1px -1px 2px #362222;
     color:#F9EBC8;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -251,10 +247,13 @@ input::-webkit-inner-spin-button {
     display:flex;
 }
 #main #informacoesCalendario #calenPrimavera {
-    width:480px;
-    height:336px;
+    width:50%;
+    height:51vh;
     margin-top:15px;
     background-image:url(../IMG/calendarioPrimavera.png);
     background-size:cover;
     background-repeat: no-repeat;
+}
+#main #informacoesCalendario #infoCalendario{
+    border: 1px solid black;
 }
